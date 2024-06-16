@@ -1,27 +1,30 @@
 // src/components/Hero.js
 import React from 'react';
-import bgHome from '../assets/bg-home.jpg';
+import bgHome from '../assets/bg-home.png';
 
 const Hero = () => {
   return (
     <div>
-      <section
-        className="h-screen flex flex-col md:flex-row bg-cover bg-center"
-        style={{ backgroundImage: `url(${bgHome})` }}
-      >
-        <div className="order-2 md:order-1 flex items-center justify-start h-full bg-gray-900 bg-opacity-10 md:bg-opacity-0">
-          <div className="text-left text-white p-8 max-w-lg bg-indigo-700 bg-opacity-90 ml-4 sm:ml-8 md:ml-16 border-2 border-gray-400">
-            <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-4 font-custom">Highschool</h1>
-            <p className="text-xl sm:text-2xl mt-4 mb-4 ml-2">A Great Place to Learn while enjoying</p>
-            <button className="text-sm sm:text-md bg-gray-600 text-gray-100 border-2 border-indigo-400 hover:bg-gray-200 hover:text-indigo-700 hover:border-2 hover:border-gray-400 transition duration-500 ease-in-out rounded p-2 mt-2">
-              Discover the school
-            </button>
+
+      <section className="h-screen grid grid-cols-1 md:grid-cols-2">
+        <div className="order-2 md:order-1 flex items-center justify-start h-full bg-yellow-400">
+          <div className="text-left text-black md:p-8 md:max-w-xl md:ml-32 md:mt-[-8%] leading-relaxed">
+            <p className="text-xl md:text-4xl mt-4 mb-4 ml-2">
+              Be a part of our journey to a Success and enjoy the learning experience
+            </p>
+            <div className="flex justify-center items-center md:mt-[16%]">
+              <button className="text-3xl px-8 sm:text-md bg-white text-gray-700 border-2 border-white hover:bg-indigo-700 hover:text-white hover:border-2 hover:border-indigo-700 transition duration-500 ease-in-out rounded-md p-2 mt-2 shadow-xl">
+                Explore
+              </button>
+            </div>
           </div>
         </div>
-        <div className="order-1 md:order-2 flex-grow md:flex-none bg-cover bg-bottom md:bg-center h-full md:h-auto">
-          <div className="h-full bg-gray-900 bg-opacity-10 md:hidden"></div>
-        </div>
+      <div
+        className="order-1 md:order-2 bg-yellow-400 bg-center bg-no-repeat h-full md:h-auto overflow-hidden"
+        style={{ backgroundImage: `url(${bgHome})`, backgroundSize: 'contain' }}
+      ></div>
       </section>
+
 
       <section className="p-8 bg-gray-100">
         <h2 className="text-4xl font-bold mb-4 text-gray-800 justify-center text-center font-custom">Safety for Everybody</h2>
