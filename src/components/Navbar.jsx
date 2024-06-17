@@ -1,15 +1,28 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { IoPersonOutline } from 'react-icons/io5';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, useLocation } from 'react-router-dom';
 
 const Navbar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
+  const [activePath, setActivePath] = useState('/');
   const navigate = useNavigate();
+  const location = useLocation();
+
+  useEffect(() => {
+    setActivePath(location.pathname);
+  }, [location.pathname]);
 
   const handleNavigation = (path) => {
     navigate(path);
+    setActivePath(path);
     setMenuOpen(false); // Close the mobile menu on navigation
   };
+
+  const getNavClass = (path) => (
+    path === activePath
+      ? 'border-b-2 border-indigo-500 text-gray-900 inline-flex items-center px-1 pt-1 text-lg font-medium cursor-pointer'
+      : 'border-b-2 border-transparent text-gray-500 hover:border-gray-300 hover:text-gray-700 transition duration-250 ease-in-out inline-flex items-center px-1 pt-1 text-lg font-medium cursor-pointer'
+  );
 
   return (
     <header className="bg-white shadow sticky top-0 z-50">
@@ -26,25 +39,25 @@ const Navbar = () => {
             <div className="flex space-x-16">
               <span
                 onClick={() => handleNavigation('/')}
-                className="border-b-2 border-indigo-500 text-gray-900 inline-flex items-center px-1 pt-1 text-lg font-medium cursor-pointer"
+                className={getNavClass('/')}
               >
                 Home
               </span>
               <span
                 onClick={() => handleNavigation('/about')}
-                className="border-b-2 border-transparent text-gray-500 hover:border-gray-300 hover:text-gray-700 transition duration-250 ease-in-out inline-flex items-center px-1 pt-1 text-lg font-medium cursor-pointer"
+                className={getNavClass('/about')}
               >
                 About
               </span>
               <span
                 onClick={() => handleNavigation('/services')}
-                className="border-b-2 border-transparent text-gray-500 hover:border-gray-300 hover:text-gray-700 transition duration-250 ease-in-out inline-flex items-center px-1 pt-1 text-lg font-medium cursor-pointer"
+                className={getNavClass('/services')}
               >
                 Services
               </span>
               <span
                 onClick={() => handleNavigation('/news')}
-                className="border-b-2 border-transparent text-gray-500 hover:border-gray-300 hover:text-gray-700 transition duration-250 ease-in-out inline-flex items-center px-1 pt-1 text-lg font-medium cursor-pointer"
+                className={getNavClass('/news')}
               >
                 News
               </span>

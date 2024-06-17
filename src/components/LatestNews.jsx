@@ -27,7 +27,7 @@ const LatestNews = () => {
           <h3 className="text-xl font-semibold">Grants for Outstanding Students</h3>
         </a>
       </div>
-      <a href="#" className="text-blue-600 mt-4 inline-block rounded hover:bg-blue-600 hover:text-white underline">Read all News</a>
+      <a href="/news" className="text-blue-600 mt-4 inline-block rounded hover:bg-blue-600 hover:text-white underline">Read all News</a>
     </div>
   );
 };
