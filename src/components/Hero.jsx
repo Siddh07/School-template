@@ -1,30 +1,43 @@
 // src/components/Hero.js
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import bgHome from '../assets/bg-home.png';
+import './animation.css';
 
 const Hero = () => {
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    const handleResize = () => {
+      setIsMobile(window.innerWidth <= 768);
+    };
+
+    handleResize();
+
+    window.addEventListener('resize', handleResize);
+
+    return () => window.removeEventListener('resize', handleResize);
+  }, []);
+
   return (
     <div>
-
-      <section className="h-screen grid grid-cols-1 md:grid-cols-2">
-        <div className="order-2 md:order-1 flex items-center justify-start h-full bg-yellow-400">
-          <div className="text-left text-black md:p-8 md:max-w-xl md:ml-32 md:mt-[-8%] leading-relaxed">
-            <p className="text-xl md:text-4xl mt-4 mb-4 ml-2">
-              Be a part of our journey to a Success and enjoy the learning experience
+      <section className="h-auto md:h-screen grid grid-cols-1 md:grid-cols-2">
+        <div className="order-1 md:order-1 flex items-center justify-center md:justify-start h-full bg-yellow-400">
+          <div className={`text-center md:text-left text-black p-4 md:p-8 md:max-w-xl md:ml-32 md:mt-[-8%] leading-relaxed ${isMobile ? 'animate-scale' : ''}`}>
+            <p className="text-xl md:text-4xl mt-4 mb-4 ml-2 transform scale-100 md:scale-100 transition-transform duration-500 ease-in-out">
+              Be a part of our journey to Success and enjoy the learning experience
             </p>
-            <div className="flex justify-center items-center md:mt-[16%]">
-              <button className="text-3xl px-8 sm:text-md bg-white text-gray-700 border-2 border-white hover:bg-indigo-700 hover:text-white hover:border-2 hover:border-indigo-700 transition duration-500 ease-in-out rounded-md p-2 mt-2 shadow-xl">
+            <div className="flex justify-center md:justify-start items-center md:mt-[16%]">
+              <button className="text-xl px-4 md:text-3xl md:px-8 sm:text-md bg-white text-gray-700 border-2 border-white hover:bg-indigo-700 hover:text-white hover:border-2 hover:border-indigo-700 transition duration-500 ease-in-out rounded-md p-2 mt-2 shadow-xl">
                 Explore
               </button>
             </div>
           </div>
         </div>
-      <div
-        className="order-1 md:order-2 bg-yellow-400 bg-center bg-no-repeat h-full md:h-auto overflow-hidden"
-        style={{ backgroundImage: `url(${bgHome})`, backgroundSize: 'contain' }}
-      ></div>
+        <div
+          className="order-2 md:order-2 bg-yellow-400 bg-center bg-no-repeat h-96 md:h-auto mb-8 md:mb-0 overflow-hidden"
+          style={{ backgroundImage: `url(${bgHome})`, backgroundSize: 'contain' }}
+        ></div>
       </section>
-
 
       <section className="p-8 bg-gray-100">
         <h2 className="text-4xl font-bold mb-4 text-gray-800 justify-center text-center font-custom">Safety for Everybody</h2>
@@ -34,7 +47,7 @@ const Hero = () => {
             Safety Measures
           </button>
         </div>
-        <div className="grid grid-cols-2 ">
+        <div className="grid grid-cols-2">
           <div className="p-4 bg-white rounded shadow">
             <h3 className="text-xl font-bold mb-2">Our History</h3>
             <p className="text-base">Learn about the rich history of our institution...</p>
