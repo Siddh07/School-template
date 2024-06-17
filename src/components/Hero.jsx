@@ -2,6 +2,8 @@
 import React, { useEffect, useState } from 'react';
 import bgHome from '../assets/bg-home.png';
 import './animation.css';
+import LatestNews from './LatestNews';
+import SchoolsEvents from './SchoolsEvents';
 
 const Hero = () => {
   const [isMobile, setIsMobile] = useState(false);
@@ -66,6 +68,16 @@ const Hero = () => {
           </div>
         </div>
       </section>
+
+
+      <div className="my-12">
+        <LatestNews />
+      </div>
+
+     
+        <SchoolsEvents />
+    
+
       <section className="p-8 bg-white">
         <h2 className="text-3xl font-bold mb-4">Programs</h2>
         <p className="text-xl">We offer a variety of programs to meet the needs of all students, including advanced placement...</p>
