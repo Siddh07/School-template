@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { useLocation } from 'react-router-dom';
 import postImage8 from '../posts/post-8.jpg';
 import postImage9 from '../posts/post-9.jpg';
 import postImage10 from '../posts/post-10.jpg';
@@ -6,6 +7,7 @@ import postsData from './Posts.json';
 
 const LatestNews = () => {
   const [posts, setPosts] = useState([]);
+  const location = useLocation();
 
   useEffect(() => {
     // Sorting posts by postId in descending order and selecting the top 3
@@ -27,16 +29,20 @@ const LatestNews = () => {
     return description;
   };
 
+  const isNewsPage = location.pathname.startsWith('/School/news');
+
   return (
     <div className="mx-auto max-w-6xl p-8">
       <div className="flex justify-between items-center mb-4">
         <h2 className="text-3xl text-gray-700 font-bold">Latest News</h2>
-        <a 
-          href="/School/news" 
-          className="text-gray-200 inline-block rounded border-2 bg-indigo-600 px-4 py-2 hover:border-blue-700 hover:bg-gray-200 hover:text-blue-700 transition duration-500 ease-in-out"
-        >
-          Read all News
-        </a>
+        {!isNewsPage && (
+          <a 
+            href="/School/news" 
+            className="text-gray-200 inline-block rounded border-2 bg-indigo-600 px-4 py-2 hover:border-blue-700 hover:bg-gray-200 hover:text-blue-700 transition duration-500 ease-in-out"
+          >
+            Read all News
+          </a>
+        )}
       </div>
       <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
         {posts.map(post => (

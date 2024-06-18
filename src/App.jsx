@@ -4,9 +4,9 @@ import Navbar from './components/Navbar';
 import Hero from './components/Hero';
 import Footer from './components/Footer';
 import Auth from './components/Auth';
-import About from './components/About';  // Add this import
-import Services from './components/Services';  // Add this import
-import News from './components/News';  // Add this import
+import About from './components/About';
+import Services from './components/Services';
+import News from './components/News';
 
 function App() {
   return (
