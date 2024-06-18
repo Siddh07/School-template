@@ -1,0 +1,75 @@
+{
+  "schoolName": "Example School",
+  "teachers": [
+    {
+      "id": 1,
+      "name": "John Smith",
+      "position": "Math Teacher",
+      "email": "john.smith@example.com",
+      "phone": "+1234567890",
+      "roomNumber": "B204",
+      "subjectsTaught": ["Algebra", "Geometry"]
+    },
+    {
+      "id": 2,
+      "name": "Emily Davis",
+      "position": "Science Teacher",
+      "email": "emily.davis@example.com",
+      "phone": "+1987654321",
+      "roomNumber": "C102",
+      "subjectsTaught": ["Biology", "Chemistry"]
+    },
+    {
+      "id": 3,
+      "name": "Mark Johnson",
+      "position": "English Teacher",
+      "email": "mark.johnson@example.com",
+      "phone": "+1122334455",
+      "roomNumber": "A301",
+      "subjectsTaught": ["Literature", "Writing"]
+    },
+    {
+      "id": 4,
+      "name": "Anna Lee",
+      "position": "History Teacher",
+      "email": "anna.lee@example.com",
+      "phone": "+1654321876",
+      "roomNumber": "D101",
+      "subjectsTaught": ["World History", "US History"]
+    }
+  ],
+  "staff": [
+    {
+      "id": 1,
+      "name": "Sarah Johnson",
+      "position": "Principal",
+      "email": "sarah.johnson@example.com",
+      "phone": "+1122334455",
+      "officeLocation": "Admin Building, Room 101"
+    },
+    {
+      "id": 2,
+      "name": "Michael Brown",
+      "position": "Administrative Assistant",
+      "email": "michael.brown@example.com",
+      "phone": "+1555666777",
+      "officeLocation": "Admin Building, Front Desk"
+    },
+    {
+      "id": 3,
+      "name": "Lisa Garcia",
+      "position": "School Nurse",
+      "email": "lisa.garcia@example.com",
+      "phone": "+1444333222",
+      "officeLocation": "Health Center"
+    },
+    {
+      "id": 4,
+      "name": "David Clark",
+      "position": "Counselor",
+      "email": "david.clark@example.com",
+      "phone": "+1789456123",
+      "officeLocation": "Student Services, Room 205"
+    }
+  ]
+}
