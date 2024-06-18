@@ -40,6 +40,13 @@ const Hero = () => {
     setDisplayedPhotos(displayedPhotos + 6);
   };
 
+  const handleScrollToGallery = () => {
+    const gallerySection = document.getElementById('gallery-section');
+    if (gallerySection) {
+      gallerySection.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
   // Function to truncate text to the first 10 words
   const truncateText = (text) => {
     const words = text.split(' ');
@@ -58,7 +65,7 @@ const Hero = () => {
               Be a part of our journey to Success and enjoy the learning experience
             </p>
             <div className="flex justify-center md:justify-start items-center md:mt-[16%]">
-              <button className="text-xl px-4 md:text-3xl md:px-8 sm:text-md bg-white text-gray-700 border-2 border-white hover:bg-indigo-700 hover:text-white hover:border-2 hover:border-indigo-700 transition duration-500 ease-in-out rounded-md p-2 mt-2 shadow-xl">
+              <button onClick={handleScrollToGallery} className="text-xl px-4 md:text-3xl md:px-8 sm:text-md bg-white text-gray-700 border-2 border-white hover:bg-indigo-700 hover:text-white hover:border-2 hover:border-indigo-700 transition duration-1000 ease-in-out rounded-md p-2 mt-2 shadow-xl">
                 Explore
               </button>
             </div>
@@ -104,7 +111,7 @@ const Hero = () => {
         <LatestNews />
       </div>
 
-      <section className="p-8 bg-gray-100">
+      <section id="gallery-section" className="p-8 bg-gray-100">
         <div className="justify-center text-center mb-8">
           <h2 className="text-4xl font-bold mb-4 text-gray-800 font-custom">Photos</h2>
           <p className="text-lg text-gray-600">Take a glimpse into our vibrant community.</p>
