@@ -1,12 +1,23 @@
 import React, { useEffect, useState } from 'react';
 import bgHome from '../assets/bg-home.png';
+import GridImg1 from '../assets/GridImg-1.jpg'; 
+import GridImg2 from '../assets/GridImg-2.jpg'; 
+import Visit from '../assets/visit.jpg'; 
+import Events from '../assets/events.jpg';
+import Festival from '../assets/festival.jpg'; 
+import Holi from '../assets/Holi.jpg'; 
+import HoliChildren from '../assets/Holi-Children.jpg'; 
+import Football from '../assets/Football.jpg'; 
+import Basketball from '../assets/Basketball.jpg'; 
+import Vollyball from '../assets/Vollyball.jpg'; 
 import './animation.css';
 import LatestNews from './LatestNews';
 import ContactForm from './ContactForm';
-import Location from './Location'; // Import the Location component
+import Location from './Location';
 
 const Hero = () => {
   const [isMobile, setIsMobile] = useState(false);
+  const [displayedPhotos, setDisplayedPhotos] = useState(6);
 
   useEffect(() => {
     const handleResize = () => {
@@ -19,6 +30,24 @@ const Hero = () => {
 
     return () => window.removeEventListener('resize', handleResize);
   }, []);
+
+  const photos = [
+    Visit, Events, GridImg2, Festival, Holi, GridImg1,
+    HoliChildren, Football, Basketball, Vollyball
+  ];
+
+  const handleViewMore = () => {
+    setDisplayedPhotos(displayedPhotos + 6);
+  };
+
+  // Function to truncate text to the first 10 words
+  const truncateText = (text) => {
+    const words = text.split(' ');
+    if (words.length > 11) {
+      return words.slice(0, 11).join(' ') + '...';
+    }
+    return text;
+  };
 
   return (
     <div>
@@ -50,21 +79,23 @@ const Hero = () => {
           </button>
         </div>
         <div className="grid grid-cols-1 md:grid-cols-2 my-4 md:mr-32 md:ml-32">
-          <div className="p-4 bg-white rounded shadow">
-            <h3 className="text-xl font-bold mb-2">Our History</h3>
-            <p className="text-base">Learn about the rich history of our institution...</p>
+          <div className="bg-white rounded shadow">
+            <img src={GridImg1} alt="Our History" className="w-full h-auto rounded" />
           </div>
-          <div className="p-4 bg-white rounded shadow">
-            <h3 className="text-xl font-bold mb-2">Mission & Vision</h3>
-            <p className="text-base">Our mission and vision guide our educational philosophy...</p>
+          <div className="bg-indigo-600 text-white shadow justiify-center text-center p-6 md:p-16">
+            <h3 className="text-4xl font-bold mb-2 md:mb-6">Mission & Vision</h3>
+            <p className="text-md">
+              {isMobile ? truncateText('Our mission is to provide a nurturing and inclusive learning environment where every student is empowered to reach their full potential. . We envision a school where every individual feels valued, respected, and supported in their journey towards personal growth and academic achievement.'):'Our mission is to provide a nurturing and inclusive learning environment where every student is empowered to reach their full potential. . We envision a school where every individual feels valued, respected, and supported in their journey towards personal growth and academic achievement.'}
+            </p>
           </div>
-          <div className="p-4 bg-white rounded shadow">
-            <h3 className="text-xl font-bold mb-2">Achievements</h3>
-            <p className="text-base">Discover the achievements and milestones we have reached...</p>
+          <div className="bg-indigo-600 text-white shadow justiify-center text-center p-6 md:px-16 md:py-24">
+            <h3 className="text-4xl font-bold mb-2 md:mb-6">Achievements</h3>
+            <p className="text-lg">
+              {isMobile ? truncateText('Our students consistently achieve outstanding results in national and international assessments. Beyond academics, our vibrant extracurricular program cultivates talents in sports, arts, and community service, garnering accolades at regional and national levels.') : 'Renowned for our commitment to innovative teaching practices and rigorous academic standards, our students consistently achieve outstanding results in national and international assessments. Beyond academics, our vibrant extracurricular program cultivates talents in sports, arts, and community service, garnering accolades at regional and national levels.'}
+            </p>
           </div>
-          <div className="p-4 bg-white rounded shadow">
-            <h3 className="text-xl font-bold mb-2">Community</h3>
-            <p className="text-base">We are deeply rooted in our community and value our partnerships...</p>
+          <div className="bg-white rounded shadow">
+            <img src={GridImg2} alt="Community" className="w-full h-auto rounded" />
           </div>
         </div>
       </section>
@@ -73,10 +104,32 @@ const Hero = () => {
         <LatestNews />
       </div>
 
-      <section className='bg-gray-100'>
-        <div className='justify-center text-center'>
-          <h3>Photos</h3>
+      <section className="p-8 bg-gray-100">
+        <div className="justify-center text-center mb-8">
+          <h2 className="text-4xl font-bold mb-4 text-gray-800 font-custom">Photos</h2>
+          <p className="text-lg text-gray-600">Take a glimpse into our vibrant community.</p>
         </div>
+        <div className={`grid grid-cols-2 ${isMobile ? 'md:grid-cols-1' : 'md:grid-cols-4'} gap-4 md:mr-32 md:ml-32`}>
+          {isMobile 
+            ? photos.slice(0, displayedPhotos).map((photo, index) => (
+                <div key={index} className="bg-white rounded shadow aspect-w-1 aspect-h-1">
+                  <img src={photo} alt={`Photo ${index + 1}`} className="object-cover w-full h-full rounded" />
+                </div>
+              ))
+            : photos.map((photo, index) => (
+                <div key={index} className="bg-white rounded shadow aspect-w-1 aspect-h-1">
+                  <img src={photo} alt={`Photo ${index + 1}`} className="object-cover w-full h-full rounded" />
+                </div>
+              ))
+          }
+        </div>
+        {isMobile && displayedPhotos < photos.length && (
+          <div className="flex justify-center mt-4">
+            <button onClick={handleViewMore} className="px-4 py-2 bg-indigo-500 text-white rounded hover:bg-indigo-600 transition duration-300">
+              View More
+            </button>
+          </div>
+        )}
       </section>
 
       <section className="p-8 bg-gray-100">

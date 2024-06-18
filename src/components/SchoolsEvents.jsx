@@ -66,7 +66,7 @@ const SchoolsEvents = () => {
                 )}
               </div>
             )}
-            {index === 0 && <hr className="border-t border-red-600 my-4" />}
+            {/* {index === 0 && <hr className="border-t border-red-600 my-4" />} */}
             {openEventIndex === index && (
               <button className="mt-2 bg-red-600 text-white py-1 px-2 rounded-md">
                 Details

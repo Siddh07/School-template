@@ -30,7 +30,7 @@ const LatestNews = () => {
   return (
     <div className="mx-auto max-w-6xl p-8">
       <div className="flex justify-between items-center mb-4">
-        <h2 className="text-3xl font-bold">Latest News</h2>
+        <h2 className="text-3xl text-gray-700 font-bold">Latest News</h2>
         <a href="/news" className="text-gray-200 inline-block rounded border-2 bg-indigo-600 px-4 py-2 hover:border-blue-700 hover:bg-gray-200 hover:text-blue-700 transition duration-500 ease-in-out">Read all News</a>
       </div>
       <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
