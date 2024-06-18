@@ -1,33 +1,46 @@
-import React from 'react';
-import latestNewsImage from '../assets/latest_News_1.jpeg';
-import latestNewsImage2 from '../assets/latest_News_2.jpg';
-import latestNewsImage3 from '../assets/latestNewsImage3.webp';
-
+import React, { useState, useEffect } from 'react';
+import postImage8 from '../posts/post-8.jpg';
+import postImage9 from '../posts/post-9.jpg';
+import postImage10 from '../posts/post-10.jpg';
+import postsData from './Posts.json';
 
 const LatestNews = () => {
+  const [posts, setPosts] = useState([]);
+
+  useEffect(() => {
+    const sortedPosts = postsData.posts.sort((a, b) => b.postId - a.postId).slice(0, 3);
+    setPosts(sortedPosts);
+  }, []);
+
+  const images = {
+    "8": postImage8,
+    "9": postImage9,
+    "10": postImage10
+  };
+
+  const truncateDescription = (description) => {
+    const words = description.split(' ');
+    if (words.length > 4) {
+      return words.slice(0, 4).join(' ') + '...';
+    }
+    return description;
+  };
+
   return (
-    <div className="p-8" style={{ backgroundColor: 'rgba(255, 232, 225, 1)' }}>
-      <h2 className="text-3xl font-bold mb-4">Latest News</h2>
+    <div className="mx-auto max-w-6xl p-8">
+      <h2 className="text-3xl font-bold mb-4 text-center">Latest News</h2>
       <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-
-
-        <a href="/your-post-url" className="bg-white p-4 shadow-md rounded-md hover:bg-gray-100 transition duration-300 ease-in-out transform hover:-translate-y-1 hover:scale-105">
-          <img src={latestNewsImage} alt="Latest School News" className="w-full h-48 object-cover rounded-md mb-4" />
-          <h3 className="text-xl font-semibold">School Is to Be Open in Fall</h3>
-        </a>
-
-
-        <a href="/your-post-url" className="bg-white p-4 shadow-md rounded-md hover:bg-gray-100 transition duration-300 ease-in-out transform hover:-translate-y-1 hover:scale-105">
-          <img src={latestNewsImage2} alt="Online STEM Program" className="w-full h-48 object-cover rounded-md mb-4" />
-          <h3 className="text-xl font-semibold">New Online Stem Program for Grades 5-8 Open Now</h3>
-        </a>
-
-        <a href="/your-post-url" className="bg-white p-4 shadow-md rounded-md hover:bg-gray-100 transition duration-300 ease-in-out transform hover:-translate-y-1 hover:scale-105">
-          <img src={latestNewsImage3} alt="Grants for Students" className="w-full h-48 object-cover rounded-md mb-4" />
-          <h3 className="text-xl font-semibold">Grants for Outstanding Students</h3>
-        </a>
+        {posts.map(post => (
+          <a key={post.postId} href="/news" className="bg-white p-4 shadow-md rounded-md hover:bg-gray-100 transition duration-150 ease-in-out transform hover:-translate-y-1 hover:scale-105">
+            <img src={images[post.postId]} alt={post.heading} className="w-full h-48 object-cover rounded-md mb-4" />
+            <h3 className="text-xl font-semibold">{post.heading}</h3>
+            <p className="text-md text-gray-600">{truncateDescription(post.description)}</p>
+          </a>
+        ))}
       </div>
-      <a href="/news" className="text-blue-600 mt-4 inline-block rounded hover:bg-blue-600 hover:text-white underline">Read all News</a>
+      <div className="text-center mt-6">
+        <a href="/news" className="text-blue-600 inline-block rounded hover:text-blue-400 hover:scale-105 underline">Read all News</a>
+      </div>
     </div>
   );
 };

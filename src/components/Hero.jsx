@@ -68,7 +68,7 @@ const Hero = () => {
         </div>
       </section>
 
-      <div className="my-12">
+      <div className="my-4">
         <LatestNews />
       </div>
 

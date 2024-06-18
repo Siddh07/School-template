@@ -1,0 +1,74 @@
+{
+  "posts": [
+    {
+      "postId": "1",
+      "heading": "Networking Events for Professionals",
+      "description": "Get guidance from experienced mentors to shape your career path effectively.",
+      "author": "John Doe",
+      "datePublished": "2024-06-01"
+    },
+    {
+      "postId": "2",
+      "heading": "Mentorship Programs for Career Guidance",
+      "description": "Attend conferences to learn about the latest trends and advancements in technology.",
+      "author": "Jane Smith",
+      "datePublished": "2024-06-05"
+    },
+    {
+      "postId": "3",
+      "heading": "Conferences on Emerging Technologies",
+      "description": "Expand your professional network by attending our exclusive networking events.",
+      "author": "Alice Johnson",
+      "datePublished": "2024-06-10"
+    },
+    {
+      "postId": "4",
+      "heading": "Top Internship Programs for Students",
+      "description": "Gain practical experience through our recommended internship programs designed for students.",
+      "author": "Bob Brown",
+      "datePublished": "2024-06-15"
+    },
+    {
+      "postId": "5",
+      "heading": "Global Student Exchange Opportunities",
+      "description": "Participate in exchange programs that offer cultural and educational experiences abroad.",
+      "author": "Carol Davis",
+      "datePublished": "2024-06-20"
+    },
+    {
+      "postId": "6",
+      "heading": "Workshops for Skill Development",
+      "description": "Join our workshops to develop and enhance your skills in various domains.",
+      "author": "Emily White",
+      "datePublished": "2024-06-25"
+    },
+    {
+      "postId": "7",
+      "heading": "Competitions for Aspiring Innovators",
+      "description": "Showcase your innovations and compete with peers to win exciting prizes.",
+      "author": "David Green",
+      "datePublished": "2024-06-30"
+    },
+    {
+      "postId": "8",
+      "heading": "Grants for Outstanding Students",
+      "description": "Discover the latest grants available for students excelling in academics and extracurricular activities.",
+      "author": "Sophia Martinez",
+      "datePublished": "2024-07-05"
+    },
+    {
+      "postId": "9",
+      "heading": "Scholarships for Academic Excellence",
+      "description": "Explore various scholarships awarded to top-performing students across different fields.",
+      "author": "Michael Taylor",
+      "datePublished": "2024-07-10"
+    },
+    {
+      "postId": "10",
+      "heading": "Funding for Innovative Research Projects",
+      "description": "Apply for funding opportunities to support your groundbreaking research initiatives.",
+      "author": "Olivia Brown",
+      "datePublished": "2024-07-15"
+    }
+  ]
+}
