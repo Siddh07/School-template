@@ -5,12 +5,32 @@ import { useNavigate, useLocation } from 'react-router-dom';
 const Navbar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
   const [activePath, setActivePath] = useState('/');
+  const [scrollY, setScrollY] = useState(0);
+  const [showNav, setShowNav] = useState(true);
   const navigate = useNavigate();
   const location = useLocation();
 
   useEffect(() => {
     setActivePath(location.pathname);
   }, [location.pathname]);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const currentScrollY = window.scrollY;
+      if (currentScrollY > scrollY) {
+        setShowNav(false);
+      } else {
+        setShowNav(true);
+      }
+      setScrollY(currentScrollY);
+    };
+
+    window.addEventListener('scroll', handleScroll);
+
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, [scrollY]);
 
   const handleNavigation = (path) => {
     navigate(path);
@@ -25,7 +45,7 @@ const Navbar = () => {
   );
 
   return (
-    <header className="bg-white shadow sticky top-0 z-50">
+    <header className={`bg-white shadow ${showNav ? 'sticky' : '-top-16'} top-0 z-50 transition-transform duration-300`}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-3 h-16 items-center relative">
           {/* First grid: Logo */}

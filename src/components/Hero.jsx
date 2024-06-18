@@ -78,14 +78,7 @@ const Hero = () => {
       </section>
 
       <section className="p-8 bg-gray-100">
-        <h2 className="text-4xl font-bold mb-4 text-gray-800 justify-center text-center font-custom">Safety for Everybody</h2>
-        <p className='text-md text-gray-400 justify-center text-center mb-4'>We put the safety of the student and our staff as our top priority</p>
-        <div className="flex justify-center items-center mb-16">
-          <button className='px-4 py-3 rounded-sm border-2 bg-indigo-500 text-gray-100 transition duration-500 ease-in-out hover:border-black hover:bg-gray-100 hover:text-indigo-600'>
-            Safety Measures
-          </button>
-        </div>
-        <div className="grid grid-cols-1 md:grid-cols-2 my-4 md:mr-32 md:ml-32">
+        <div className="grid grid-cols-1 md:grid-cols-2 md:mt-32 my-4 md:mr-32 md:ml-32">
           <div className="bg-white rounded shadow">
             <img src={GridImg1} alt="Our History" className="w-full h-auto rounded" />
           </div>
@@ -113,7 +106,7 @@ const Hero = () => {
 
       <section id="gallery-section" className="p-8 bg-gray-100">
         <div className="justify-center text-center mb-8">
-          <h2 className="text-4xl font-bold mb-4 text-gray-800 font-custom">Photos</h2>
+          <h2 className="text-4xl font-bold mb-4 text-gray-800 font-custom">Moments saved in school</h2>
           <p className="text-lg text-gray-600">Take a glimpse into our vibrant community.</p>
         </div>
         <div className={`grid grid-cols-2 ${isMobile ? 'md:grid-cols-1' : 'md:grid-cols-4'} gap-4 md:mr-32 md:ml-32`}>
@@ -131,7 +124,7 @@ const Hero = () => {
           }
         </div>
         {isMobile && displayedPhotos < photos.length && (
-          <div className="flex justify-center mt-4">
+          <div className="flex justify-center mt-8">
             <button onClick={handleViewMore} className="px-4 py-2 bg-indigo-500 text-white rounded hover:bg-indigo-600 transition duration-300">
               View More
             </button>
