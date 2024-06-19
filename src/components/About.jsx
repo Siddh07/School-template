@@ -37,15 +37,12 @@ const About = () => {
   const [isMobile, setIsMobile] = useState(false);
 
   useEffect(() => {
-    // Function to check if device is mobile
     const checkIsMobile = () => {
       return /Mobi|Android/i.test(navigator.userAgent);
     };
 
-    // Set initial state
     setIsMobile(checkIsMobile());
 
-    // Add resize event listener to update state when window size changes
     const handleResize = () => {
       setIsMobile(checkIsMobile());
     };
@@ -113,50 +110,40 @@ const About = () => {
         </div>
       </div>
 
-       {/* Section 4 - Faculty and Staff */}
-      <div id="staff-section" className="p-8 mt-16">
-        <div className="ml-32 mb-8">
-          <h2 className="text-4xl font-bold mb-4 text-gray-700 font-custom">Faculty and Staff</h2>
-          <p className="text-lg text-gray-600">
-            Our faculty and staff are dedicated to providing you with the best possible learning experience.
-          </p>
-        </div>
-        <div className="grid grid-cols-3 gap-0 md:ml-[16.5%] md:mr-[16.9%]"> {/* Remove gap between grid items */}
-          {TeacherInfo.teachers.map((teacher) => (
-            <div key={teacher.id} className="flex flex-col items-center">
-              <div className="relative">
-                <img
-                  src={teacherImages[teacher.id]} // Static import based on teacher.id
-                  alt={`About-Teacher-${teacher.id}`}
-                  className="aspect-w-16 aspect-h-9" // Example of setting aspect ratio
-                />
-                <div className="absolute inset-0 flex flex-col items-center justify-center bg-black bg-opacity-50 opacity-0 hover:opacity-100 transition-opacity duration-300">
-                  <h3 className="text-lg font-bold text-white mt-4">{teacher.name}</h3>
-                  <p className="text-gray-300">{teacher.position}</p>
+      {/* New Section for Teachers and Staff */}
+      <div className='row justify-content-center mt-16 md:mt-32'>
+        <div className='col-lg-8 col-md-10 col-sm-12'>
+          <div className='md:ml-[10%] md:mr-[10%]'>
+            <h2 className='text-center text-4xl font-bold text-gray-500'>Our Staffs</h2>
+            <div className='grid grid-cols-2 md:grid-cols-4 gap-1 mt-8'>
+              {TeacherInfo.staff.map((staff) => (
+                <div key={staff.id} className='relative text-center group'>
+                  <img src={staffImages[staff.id]} alt={staff.name} className="w-full h-auto rounded-lg" />
+                  <div className='absolute bottom-0 left-0 w-full bg-black bg-opacity-50 text-white p-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-b-lg'>
+                    <h3 className='md:text-2xl text-xl'>{staff.name}</h3>
+                    <p className='md:text-lg text-md'>{staff.position}</p>
+                  </div>
                 </div>
-              </div>
+              ))}
             </div>
-          ))}
-          {TeacherInfo.staff.map((staff) => (
-            <div key={staff.id} className="flex flex-col items-center">
-              <div className="relative">
-                <img
-                  src={staffImages[staff.id]} // Static import based on staff.id
-                  alt={`About-Staff-${staff.id}`}
-                  className="aspect-w-16 aspect-h-9" // Example of setting aspect ratio
-                />
-                <div className="absolute inset-0 flex flex-col items-center justify-center bg-black bg-opacity-50 opacity-0 hover:opacity-100 transition-opacity duration-300">
-                  <h3 className="text-lg font-bold text-white mt-4">{staff.name}</h3>
-                  <p className="text-gray-300">{staff.position}</p>
+          </div>
+          <div className='mt-16 md:ml-[10%] md:mr-[10%]'>
+            <h2 className='text-center text-4xl font-bold text-gray-500 mb-8'>Our Teacher</h2>
+            <div className='grid grid-cols-2 md:grid-cols-4 gap-1'>
+              {TeacherInfo.teachers.map((teacher) => (
+                <div key={teacher.id} className='relative text-center group'>
+                  <img src={teacherImages[teacher.id]} alt={teacher.name} className="w-full h-auto rounded-lg" />
+                  <div className='absolute bottom-0 left-0 w-full bg-black bg-opacity-50 text-white p-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-b-lg'>
+                    <h3 className='md:text-2xl text-xl'>{teacher.name}</h3>
+                    <p className='text-md:text-lg text-md'>{teacher.position}</p>
+                  </div>
                 </div>
-              </div>
+              ))}
             </div>
-          ))}
+          </div>
         </div>
       </div>
 
-
-      {/* Section 5 */}
       <div className="p-8">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-2">
           <div className="col-span-1 md:col-span-1 md:ml-[25%]">
