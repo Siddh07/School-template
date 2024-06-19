@@ -32,7 +32,8 @@ const LatestNews = () => {
   const isNewsPage = location.pathname.startsWith('/School/news');
 
   return (
-    <div className="mx-auto max-w-6xl p-8">
+    <div className="mx-auto max-w-7xl p-8">
+      {/* w is for the width of the box and adjisting it to the desigred length */}
       <div className="flex justify-between items-center mb-4">
         <h2 className="text-3xl text-gray-700 font-bold">Latest News</h2>
         {!isNewsPage && (
@@ -49,7 +50,7 @@ const LatestNews = () => {
           <a 
             key={post.postId} 
             href={`/School/news/post-${post.postId}`} 
-            className="bg-white shadow-md transition duration-150 ease-in-out transform hover:-translate-y-1 hover:scale-105 block"
+            className="bg-white shadow-md transition duration-350 ease-in-out transform hover:-translate-y-1 hover:scale-105 block"
           >
             <img 
               src={images[post.postId]} 

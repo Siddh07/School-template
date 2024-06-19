@@ -82,15 +82,15 @@ const Hero = () => {
           <div className="bg-white rounded shadow">
             <img src={GridImg1} alt="Our History" className="w-full h-auto rounded" />
           </div>
-          <div className="bg-indigo-600 text-white shadow justiify-center text-center p-6 md:p-16">
-            <h3 className="text-4xl font-bold mb-2 md:mb-6">Mission & Vision</h3>
-            <p className="text-md">
+          <div className="bg-indigo-600 text-gray-100 shadow justiify-center text-center p-6 md:p-16">
+            <h3 className="md:text-6xl text-4xl  font-bold mb-2 md:mb-6">Mission & Vision</h3>
+            <p className="md:text-xl  text-lg font-bold">
               {isMobile ? truncateText('Our mission is to provide a nurturing and inclusive learning environment where every student is empowered to reach their full potential. . We envision a school where every individual feels valued, respected, and supported in their journey towards personal growth and academic achievement.'):'Our mission is to provide a nurturing and inclusive learning environment where every student is empowered to reach their full potential. . We envision a school where every individual feels valued, respected, and supported in their journey towards personal growth and academic achievement.'}
             </p>
           </div>
-          <div className="bg-indigo-600 text-white shadow justiify-center text-center p-6 md:px-16 md:py-24">
-            <h3 className="text-4xl font-bold mb-2 md:mb-6">Achievements</h3>
-            <p className="text-lg">
+          <div className="bg-indigo-600 text-gray-100 shadow justiify-center text-center p-6 md:px-16 md:py-24">
+            <h3 className="md:text-6xl text-4xl font-bold mb-2 md:mb-6">Achievements</h3>
+            <p className="md:text-2xl text-lg">
               {isMobile ? truncateText('Our students consistently achieve outstanding results in national and international assessments. Beyond academics, our vibrant extracurricular program cultivates talents in sports, arts, and community service, garnering accolades at regional and national levels.') : 'Renowned for our commitment to innovative teaching practices and rigorous academic standards, our students consistently achieve outstanding results in national and international assessments. Beyond academics, our vibrant extracurricular program cultivates talents in sports, arts, and community service, garnering accolades at regional and national levels.'}
             </p>
           </div>
