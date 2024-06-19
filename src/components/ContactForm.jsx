@@ -53,11 +53,11 @@ const ContactForm = () => {
         <h2 className="text-2xl font-bold mb-4 text-gray-800 text-center">Contact Us</h2>
         <div className="mb-4 flex">
           <div className="w-1/2 mr-1">
-            <label className="block text-gray-700 text-sm font-bold mb-2" htmlFor="firstName">
+            <label className="block text-gray-700 text-xl font-bold mb-2" htmlFor="firstName">
               First Name
             </label>
             <input
-              className="shadow appearance-none border-b border-gray-200 rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+              className="shadow appearance-none text-lg border-b border-gray-200 rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
               id="firstName"
               type="text"
               name="firstName"
@@ -67,11 +67,11 @@ const ContactForm = () => {
             />
           </div>
           <div className="w-1/2 ml-1">
-            <label className="block text-gray-700 text-sm font-bold mb-2" htmlFor="lastName">
+            <label className="block text-gray-700 text-xl font-bold mb-2" htmlFor="lastName">
               Last Name
             </label>
             <input
-              className="shadow appearance-none border-b border-gray-200 rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+              className="shadow appearance-none text-lg border-b border-gray-200 rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
               id="lastName"
               type="text"
               name="lastName"
@@ -83,11 +83,11 @@ const ContactForm = () => {
         </div>
         <div className="mb-4 flex">
           <div className="w-1/2 mr-1">
-            <label className="block text-gray-700 text-sm font-bold mb-2" htmlFor="email">
+            <label className="block text-gray-700 text-xl font-bold mb-2" htmlFor="email">
               Email
             </label>
             <input
-              className="shadow appearance-none border-b border-gray-200 rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+              className="shadow appearance-none text-lg border-b border-gray-200 rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
               id="email"
               type="email"
               name="email"
@@ -97,11 +97,11 @@ const ContactForm = () => {
             />
           </div>
           <div className="w-1/2 ml-1">
-            <label className="block text-gray-700 text-sm font-bold mb-2" htmlFor="phone">
+            <label className="block text-gray-700 text-xl font-bold mb-2" htmlFor="phone">
               Phone
             </label>
             <input
-              className="shadow appearance-none border-b border-gray-200 rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+              className="shadow appearance-none text-lg border-b border-gray-200 rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
               id="phone"
               type="text"
               placeholder="Optional"
@@ -112,11 +112,11 @@ const ContactForm = () => {
           </div>
         </div>
         <div className="mb-6">
-          <label className="block text-gray-700 text-sm font-bold mb-2" htmlFor="message">
+          <label className="block text-gray-700 text-xl font-bold mb-2" htmlFor="message">
             Message
           </label>
           <textarea
-            className="shadow appearance-none border-b border-gray-200 rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+            className="shadow appearance-none text-lg border-b border-gray-200 rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
             id="message"
             placeholder="Something to chat about."
             name="message"

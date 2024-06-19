@@ -9,9 +9,8 @@ const Location = () => {
   const email = "info@example.com";
 
   return (
-    <div className="p-4 bg-white rounded shadow mt-8">
-      <h3 className="text-xl font-bold mb-2">Location</h3>
-      <div style={{ height: '200px' }}>
+    <div className="p-4 bg-white rounded shadow mt-8 w-[100%]">
+      <div style={{ height: '380px', }}>
         <MapContainer
           center={[51.505, -0.09]}
           zoom={13}
@@ -28,9 +27,9 @@ const Location = () => {
           </Marker>
         </MapContainer>
       </div>
-      <p className="text-base mt-2">Address: {address}</p>
-      <p className="text-base">Phone: {phone}</p>
-      <p className="text-base">Email: {email}</p>
+      <p className="text-lg font-bold text-gray-600 text-center mt-2">Address: {address}</p>
+      <p className="text-lg font-bold text-gray-600 text-center">Phone: {phone}</p>
+      <p className="text-lg font-bold text-gray-600 text-center">Email: {email}</p>
     </div>
   );
 };

@@ -146,7 +146,7 @@ const About = () => {
 
       <div className="p-8">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-2">
-          <div className="col-span-1 md:col-span-1 md:ml-[25%]">
+          <div className="col-span-1 md:col-span-1 md:ml-[15%]">
             <Location />
           </div>
           <div className="col-span-1 md:col-span-1 md:mr-[25%]">

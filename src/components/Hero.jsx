@@ -134,10 +134,10 @@ const Hero = () => {
 
       <section className="p-8 bg-gray-100">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-2">
-          <div className="col-span-1 md:col-span-1 md:ml-[25%]">
+          <div className="col-span-1 md:col-span-1 md:ml-[35%]">
             <Location />
           </div>
-          <div className="col-span-1 md:col-span-1 md:mr-[25%]">
+          <div className="col-span-1 md:col-span-1 md:mr-[35%]">
             <ContactForm />
           </div>
         </div>
