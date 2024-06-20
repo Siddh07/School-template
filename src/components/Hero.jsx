@@ -2,22 +2,14 @@ import React, { useEffect, useState } from 'react';
 import bgHome from '../assets/bg-home.png';
 import GridImg1 from '../assets/GridImg-1.jpg'; 
 import GridImg2 from '../assets/GridImg-2.jpg'; 
-import Visit from '../assets/visit.jpg'; 
-import Events from '../assets/events.jpg';
-import Festival from '../assets/festival.jpg'; 
-import Holi from '../assets/Holi.jpg'; 
-import HoliChildren from '../assets/Holi-Children.jpg'; 
-import Football from '../assets/Football.jpg'; 
-import Basketball from '../assets/Basketball.jpg'; 
-import Vollyball from '../assets/Vollyball.jpg'; 
 import './animation.css';
 import LatestNews from './LatestNews';
+import Slideshow from './Slideshow';
 import ContactForm from './ContactForm';
 import Location from './Location';
 
 const Hero = () => {
   const [isMobile, setIsMobile] = useState(false);
-  const [displayedPhotos, setDisplayedPhotos] = useState(6);
 
   useEffect(() => {
     const handleResize = () => {
@@ -30,15 +22,6 @@ const Hero = () => {
 
     return () => window.removeEventListener('resize', handleResize);
   }, []);
-
-  const photos = [
-    Visit, Events, GridImg2, Festival, Holi, GridImg1,
-    HoliChildren, Football, Basketball, Vollyball
-  ];
-
-  const handleViewMore = () => {
-    setDisplayedPhotos(displayedPhotos + 6);
-  };
 
   const handleScrollToGallery = () => {
     const gallerySection = document.getElementById('gallery-section');
@@ -65,7 +48,7 @@ const Hero = () => {
               Be a part of our journey to Success and enjoy the learning experience
             </p>
             <div className="flex justify-center md:justify-start items-center md:mt-[16%]">
-              <button onClick={handleScrollToGallery} className="text-xl px-4 md:text-3xl md:px-8 sm:text-md bg-white text-gray-700 border-2 border-white hover:bg-indigo-700 hover:text-white hover:border-2 hover:border-indigo-700 transition duration-1000 ease-in-out rounded-md p-2 mt-2 shadow-xl">
+              <button onClick={handleScrollToGallery} className="text-xl px-4 md:text-3xl md:px-8 sm:text-md bg-white text-gray-700 border-2 border-gray-300 hover:bg-indigo-700 hover:text-white hover:border-2 hover:border-indigo-700 transition duration-1000 ease-in-out rounded-md p-2 mt-2 shadow-xl">
                 Explore
               </button>
             </div>
@@ -109,30 +92,10 @@ const Hero = () => {
           <h2 className="text-4xl font-bold mb-4 text-gray-800 font-custom">Moments saved in school</h2>
           <p className="text-lg text-gray-600">Take a glimpse into our vibrant community.</p>
         </div>
-        <div className={`grid grid-cols-2 ${isMobile ? 'md:grid-cols-1' : 'md:grid-cols-4'} gap-4 md:mr-32 md:ml-32`}>
-          {isMobile 
-            ? photos.slice(0, displayedPhotos).map((photo, index) => (
-                <div key={index} className="bg-white rounded shadow aspect-w-1 aspect-h-1">
-                  <img src={photo} alt={`Photo ${index + 1}`} className="object-cover w-full h-full rounded" />
-                </div>
-              ))
-            : photos.map((photo, index) => (
-                <div key={index} className="bg-white rounded shadow aspect-w-1 aspect-h-1">
-                  <img src={photo} alt={`Photo ${index + 1}`} className="object-cover w-full h-full rounded" />
-                </div>
-              ))
-          }
-        </div>
-        {isMobile && displayedPhotos < photos.length && (
-          <div className="flex justify-center mt-8">
-            <button onClick={handleViewMore} className="px-4 py-2 bg-indigo-500 text-white rounded hover:bg-indigo-600 transition duration-300">
-              View More
-            </button>
-          </div>
-        )}
+        <Slideshow />
       </section>
 
-      <section className="p-8 bg-gray-100">
+      <section className="p-8 mt-[-2%] bg-gray-100">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-2">
           <div className="col-span-1 md:col-span-1 md:ml-[35%]">
             <Location />
