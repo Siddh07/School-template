@@ -81,11 +81,11 @@ const About = () => {
       {/* Section 2 */}
       <div className='row justify-content-center mt-16'>
         <div className='col-lg-8 col-md-10 col-sm-12'>
-          <div className='grid grid-cols-1 md:grid-cols-2 gap-4 md:ml-64 md:mr-64'>
+          <div className='grid grid-cols-1 md:grid-cols-2 md:ml-64 md:mr-64'>
             <div className=''>
               <img src={PrincipalImage} alt="About-Principal" className="w-full h-auto rounded" />
             </div>
-            <div className='border justify-content-center text-center items-center bg-indigo-900 py-16'>
+            <div className='border justify-content-center text-center items-center bg-indigo-600 py-16'>
               <h3 className='text-3xl text-gray-100 mb-4'>
                 Principal's Message
               </h3>
@@ -93,7 +93,7 @@ const About = () => {
                 As your principal, my top priority is to ensure that you have a safe, supportive, and stimulating environment in which to learn and grow. Our dedicated teachers and staff are here to help you succeed, and I encourage you to take full advantage of the opportunities and resources available to you.
               </p>
             </div>
-            <div className="border bg-indigo-900 text-white py-16 md:py-20">
+            <div className="border bg-indigo-600 text-white py-16 md:py-20">
               <h2 className='justify-content-center text-center items-center text-4xl'>Vision & Values</h2>
               <ul className="mt-8 text-md font-bold list-disc list-inside pl-16 md:pl-[30%]">
                 <li className="mb-2">Excellence in education</li>
