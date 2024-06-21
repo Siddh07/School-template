@@ -1,0 +1,42 @@
+/* src/Page.css */
+
+.page {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #f7fafc;
+    /* Change as needed */
+    transition: transform 0.5s ease;
+}
+
+.page-next {
+    animation: turnNext 0.5s forwards;
+}
+
+.page-prev {
+    animation: turnPrev 0.5s forwards;
+}
+
+@keyframes turnNext {
+    0% {
+        transform: perspective(1200px) rotateY(0deg);
+    }
+
+    100% {
+        transform: perspective(1200px) rotateY(-180deg);
+    }
+}
+
+@keyframes turnPrev {
+    0% {
+        transform: perspective(1200px) rotateY(0deg);
+    }
+
+    100% {
+        transform: perspective(1200px) rotateY(180deg);
+    }
+}

@@ -36,6 +36,12 @@ const Navbar = () => {
     navigate(path);
     setActivePath(path);
     setMenuOpen(false); // Close the mobile menu on navigation
+
+    // Scroll to the top of the page
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth'  // Smooth scrolling behavior
+    });
   };
 
   const getNavClass = (path) => (
@@ -84,7 +90,7 @@ const Navbar = () => {
               <span
                 onClick={() => handleNavigation('/parent')}
                 className={getNavClass('/parent')} 
-                style={{zIndex: '50',}}
+                style={{zIndex: '10',}}
               >
                 Parent
               </span>
