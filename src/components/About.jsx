@@ -67,7 +67,7 @@ const About = () => {
             <h1 className='text-6xl text-gray-700 py-12 font-bold'>Our School</h1>
           </div>
           {isMobile ? (
-            <p className='justify--center text-center text-gray-400 text-md md:px-[35%]'>
+            <p className='justify-center text-center text-gray-400 text-md md:px-[35%]'>
               {`${originalText.split(' ').slice(0, 17).join(' ')}...`}
             </p>
           ) : (
@@ -85,17 +85,17 @@ const About = () => {
             <div className=''>
               <img src={PrincipalImage} alt="About-Principal" className="w-full h-auto rounded" />
             </div>
-            <div className='border justify-content-center text-center items-center bg-indigo-600 text-gray-300 py-16'>
-              <h3 className='text-3xl mb-4'>
+            <div className='border justify-content-center text-center items-center bg-indigo-900 text-gray-200 hover:bg-gray-200 hover:text-indigo-900 transition duration-1000 ease-in-out py-8 md:py-14'>
+              <h3 className='text-4xl mt-[-2%] mb-4 font-serif underline'>
                 Principal's Message
               </h3>
-              <p className='text-lg px-6 md:px-24'>
+              <p className='md:text-2xl text-lg px-6 md:px-24 font-serif'>
                 As your principal, my top priority is to ensure that you have a safe, supportive, and stimulating environment in which to learn and grow. Our dedicated teachers and staff are here to help you succeed, and I encourage you to take full advantage of the opportunities and resources available to you.
               </p>
             </div>
-            <div className="border bg-indigo-600 text-gray-300 py-16 md:py-20">
-              <h2 className='justify-content-center text-center items-center text-4xl'>Vision & Values</h2>
-              <ul className="mt-8 text-md font-bold list-disc list-inside pl-16 md:pl-[30%]">
+            <div className="border-2 bg-indigo-900 text-gray-200 hover:bg-gray-200 hover:text-indigo-900 transition duration-1000 ease-in-out py-16 md:py-20">
+              <h2 className='justify-content-center text-center items-center text-5xl underline font-serif'>Vision & Values</h2>
+              <ul className="mt-8 text-lg font-bold list-disc list-inside pl-16 md:pl-[30%]">
                 <li className="mb-2">Excellence in education</li>
                 <li className="mb-2">Fostering creativity and innovation</li>
                 <li className="mb-2">Respect and inclusivity</li>

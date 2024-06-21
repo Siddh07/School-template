@@ -63,16 +63,18 @@ Make sure you have the following installed on your local machine:
    and you have to install all these dependencies to run this project
 
    ```bash
-     "dependencies": {
-    "@fortawesome/fontawesome-free": "^6.5.2",
-    "leaflet": "^1.9.4",
-    "react": "^18.3.1",
-    "react-dom": "^18.3.1",
-    "react-icons": "^5.2.1",
-    "react-leaflet": "^4.2.1",
-    "react-router-dom": "^6.23.1",
-    "react-slick": "^0.30.2",
-    "slick-carousel": "^1.8.1"
+    npm install @fortawesome/fontawesome-free@^6.5.2 \
+            @fortawesome/fontawesome-svg-core@^6.5.2 \
+            @fortawesome/free-solid-svg-icons@^6.5.2 \
+            @fortawesome/react-fontawesome@^0.2.2 \
+            leaflet@^1.9.4 \
+            react@^18.3.1 \
+            react-dom@^18.3.1 \
+            react-icons@^5.2.1 \
+            react-leaflet@^4.2.1 \
+            react-router-dom@^6.23.1 \
+            react-slick@^0.30.2 \
+            slick-carousel@^1.8.1
    ```
 
 ### Usage
