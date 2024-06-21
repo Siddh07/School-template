@@ -70,10 +70,10 @@ const Navbar = () => {
                 About
               </span>
               <span
-                onClick={() => handleNavigation('/services')}
-                className={getNavClass('/services')}
+                onClick={() => handleNavigation('/learning')}
+                className={getNavClass('/learning')}
               >
-                Services
+                Learning
               </span>
               <span
                 onClick={() => handleNavigation('/news')}
@@ -140,10 +140,10 @@ const Navbar = () => {
                 About
               </span>
               <span
-                onClick={() => handleNavigation('/services')}
+                onClick={() => handleNavigation('/learning')}
                 className="block px-3 py-2 rounded-md text-xl font-medium text-gray-700 hover:text-gray-900 hover:bg-gray-50 cursor-pointer"
               >
-                Services
+                Learning
               </span>
               <span
                 onClick={() => handleNavigation('/news')}

@@ -59,12 +59,12 @@ const About = () => {
     'Welcome to Our School, where we prioritize holistic education that fosters both academic achievement and personal growth. Our commitment extends beyond classrooms; we emphasize character development and community involvement.';
 
   return (
-    <div className='container-fluid'>
+    <div className='container-fluid bg-gray-200'>
       {/* Section 1 */}
       <div className='row justify-content-center'>
         <div className='col-lg-8 col-md-10 col-sm-12'>
           <div className='text-center'>
-            <h1 className='text-6xl text-gray-700 mb-10 mt-16 font-bold'>Our School</h1>
+            <h1 className='text-6xl text-gray-700 py-12 font-bold'>Our School</h1>
           </div>
           {isMobile ? (
             <p className='justify--center text-center text-gray-400 text-md md:px-[35%]'>
@@ -115,7 +115,7 @@ const About = () => {
         <div className='col-lg-8 col-md-10 col-sm-12'>
           <div className='md:ml-[10%] md:mr-[10%]'>
             <h2 className='text-center text-4xl font-bold text-gray-500'>Our Staffs</h2>
-            <div className='grid grid-cols-2 md:grid-cols-4 gap-1 mt-8'>
+            <div className='grid grid-cols-2 md:grid-cols-4 gap-2 mt-8'>
               {TeacherInfo.staff.map((staff) => (
                 <div key={staff.id} className='relative text-center group'>
                   <img src={staffImages[staff.id]} alt={staff.name} className="w-full h-auto rounded-lg" />
@@ -129,7 +129,7 @@ const About = () => {
           </div>
           <div className='mt-16 md:ml-[10%] md:mr-[10%]'>
             <h2 className='text-center text-4xl font-bold text-gray-500 mb-8'>Our Teacher</h2>
-            <div className='grid grid-cols-2 md:grid-cols-4 gap-1'>
+            <div className='grid grid-cols-2 md:grid-cols-4 gap-2'>
               {TeacherInfo.teachers.map((teacher) => (
                 <div key={teacher.id} className='relative text-center group'>
                   <img src={teacherImages[teacher.id]} alt={teacher.name} className="w-full h-auto rounded-lg" />

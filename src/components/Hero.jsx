@@ -48,7 +48,7 @@ const Hero = () => {
               Be a part of our journey to Success and enjoy the learning experience
             </p>
             <div className="flex justify-center md:justify-start items-center md:mt-[16%]">
-              <button onClick={handleScrollToGallery} className="text-xl px-4 md:text-3xl md:px-8 sm:text-md bg-white text-gray-700 border-2 border-gray-300 hover:bg-indigo-700 hover:text-white hover:border-2 hover:border-indigo-700 transition duration-1000 ease-in-out rounded-md p-2 mt-2 shadow-xl">
+              <button onClick={handleScrollToGallery} className="text-xl px-4 md:text-3xl md:px-8 sm:text-md bg-white text-gray-700 border-2 hover:bg-indigo-700 hover:text-white hover:border-2 hover:border-gray-300 transition duration-1000 ease-in-out rounded-md p-2 mt-2 shadow-xl">
                 Explore
               </button>
             </div>

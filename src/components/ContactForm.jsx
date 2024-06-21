@@ -128,7 +128,7 @@ const ContactForm = () => {
         </div>
         <div className="flex items-center justify-center">
           <button
-            className={`border-2 bg-indigo-700 hover:bg-white hover:border-indigo-700 hover:text-indigo-700 text-white font-bold py-2 px-5 rounded transition duration-500 focus:outline-none focus:shadow-outline ${isSubmitting || isSubmitted ? 'opacity-50 cursor-not-allowed' : ''}`}
+            className={`border-2 bg-indigo-700 hover:bg-white hover:border-indigo-700 hover:text-indigo-700 text-lg text-white font-bold py-2 px-5 rounded transition duration-500 focus:outline-none focus:shadow-outline ${isSubmitting || isSubmitted ? 'opacity-50 cursor-not-allowed' : ''}`}
             type="submit"
             disabled={isSubmitting || isSubmitted}
           >
