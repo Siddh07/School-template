@@ -137,7 +137,7 @@ This project is licensed under the MIT License. See the [LICENSE](LICENSE) file 
 
 ## Authors
 
-- **Siddhant** - [Siddh's GitHub](https://github.com/Siddh07)
+- **Siddhant** - [Siddhant's GitHub](https://github.com/Siddh07)
 - **Pujan** - [Pujan's GitHub](https://github.com/pujanjoci)
 
 ## Acknowledgments
