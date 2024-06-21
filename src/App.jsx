@@ -5,7 +5,8 @@ import Hero from './components/Hero';
 import Footer from './components/Footer';
 import Auth from './components/Auth';
 import About from './components/About';
-import Services from './components/Services';
+import Learning from './components/Learning';
+import Parent from './components/Parent';
 import News from './components/News';
 
 function App() {
@@ -17,7 +18,8 @@ function App() {
           <Route path="/" element={<Hero />} />
           <Route path="/login" element={<Auth />} />
           <Route path="/about" element={<About />} />
-          <Route path="/services" element={<Services />} />
+          <Route path="/learning" element={<Learning />}/>
+          <Route path="/parent" element={<Parent />} /> 
           <Route path="/news" element={<News />} />
         </Routes>
         <Footer />

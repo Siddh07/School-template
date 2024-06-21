@@ -55,7 +55,7 @@ const Navbar = () => {
             </span>
           </div>
           {/* Second grid: Navigation */}
-          <div className="hidden sm:flex justify-center items-center">
+          <nav className="hidden sm:flex justify-center items-center">
             <div className="flex space-x-16">
               <span
                 onClick={() => handleNavigation('/')}
@@ -81,8 +81,15 @@ const Navbar = () => {
               >
                 News
               </span>
+              <span
+                onClick={() => handleNavigation('/parent')}
+                className={getNavClass('/parent')} 
+                style={{zIndex: '50',}}
+              >
+                Parent
+              </span>
             </div>
-          </div>
+          </nav>
           {/* Third grid: Hamburger Menu */}
           <div className="flex justify-end items-center sm:hidden">
             <button
@@ -125,7 +132,7 @@ const Navbar = () => {
         </div>
         {/* Mobile Menu */}
         {menuOpen && (
-          <div className="sm:hidden absolute top-16 left-0 right-0 z-50 bg-white shadow-lg">
+          <nav className="sm:hidden absolute top-16 left-0 right-0 z-50 bg-white shadow-lg">
             <div className="px-2 pt-5 pb-10 space-y-5 flex flex-col items-center">
               <span
                 onClick={() => handleNavigation('/')}
@@ -152,13 +159,19 @@ const Navbar = () => {
                 News
               </span>
               <span
+                onClick={() => handleNavigation('/parent')}
+                className="block px-3 py-2 rounded-md text-xl font-medium text-gray-700 hover:text-gray-900 hover:bg-gray-50 cursor-pointer"
+              >
+                Parent
+              </span>
+              <span
                 onClick={() => handleNavigation('/login')}
                 className="block px-3 py-2 rounded-md text-xl font-medium bg-indigo-600 text-white border-2 hover:bg-gray-100 hover:border-black hover:text-gray-700 transition duration-500 ease-in-out cursor-pointer"
               >
                 Log In
               </span>
             </div>
-          </div>
+          </nav>
         )}
       </div>
     </header>
