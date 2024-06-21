@@ -34,7 +34,7 @@ const Page = () => {
     case 1:
       pageContent = (
         <div className={`page page1 ${animationDirection === 'next' ? 'page-next' : ''} ${animationDirection === 'prev' ? 'page-prev' : ''}`}>
-            <div className='text-center mt-[-15%] md:mt-[-10%]'>
+            <div className='text-center mt-[-35%] md:mt-[-10%]'>
                 <span className="text-4xl text-gray-500">For the
                     <h1 className='font-bold text-yellow-400 mb-6'>PARENTS</h1>
                 </span>
@@ -55,7 +55,7 @@ const Page = () => {
     case 2:
       pageContent = (
         <div className={`page page2 ${animationDirection === 'next' ? 'page-next' : ''} ${animationDirection === 'prev' ? 'page-prev' : ''}`}>
-            <div className='text-center mt-[-25%] md:mt-[-5%] md:px-[25%]'>
+            <div className='text-center mt-[-40%] md:mt-[-5%] md:px-[25%]'>
                 <span className="text-4xl text-gray-500">
                     <h1 className='font-bold text-blue-500 mb-6'>Uniform</h1>
                 </span>
@@ -76,7 +76,7 @@ const Page = () => {
     case 3:
       pageContent = (
         <div className={`page page3 ${animationDirection === 'next' ? 'page-next' : ''} ${animationDirection === 'prev' ? 'page-prev' : ''}`}>
-          <div className='text-center mt-[-15%] md:mt-[-5%] md:px-[15%]'>
+          <div className='text-center mt-[-40%] md:mt-[-5%] md:px-[15%]'>
                 <span className="text-4xl text-gray-500">
                     <h1 className='font-bold text-green-500 mb-6'>Holiday & Absence</h1>
                 </span>
@@ -99,7 +99,7 @@ const Page = () => {
     case 4:
       pageContent = (
         <div className={`page page3 ${animationDirection === 'next' ? 'page-next' : ''} ${animationDirection === 'prev' ? 'page-prev' : ''}`}>
-          <div className='text-center mt-[-25%] md:mt-[-5%] md:px-[25%]'>
+          <div className='text-center mt-[-55%] md:mt-[-5%] md:px-[25%]'>
                 <span className="text-4xl text-gray-500">
                     <h1 className='font-bold text-red-600 mb-6'>Safety First</h1>
                 </span>
