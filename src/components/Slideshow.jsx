@@ -36,6 +36,23 @@ const Slideshow = () => {
     return () => window.removeEventListener('resize', handleResize);
   }, []);
 
+  useEffect(() => {
+    if (isOpen) {
+      document.body.style.overflow = 'hidden';
+
+      const intervalId = setInterval(() => {
+        setActiveIndex((prevIndex) => (prevIndex + 1) % images.length);
+      }, 3000); // Change image every 3 seconds
+
+      return () => {
+        clearInterval(intervalId);
+        document.body.style.overflow = 'auto';
+      };
+    } else {
+      document.body.style.overflow = 'auto';
+    }
+  }, [isOpen]);
+
   const openSlideshow = (index) => {
     setActiveIndex(index);
     setIsOpen(true);
