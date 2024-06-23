@@ -44,7 +44,7 @@ const SchoolsEvents = () => {
       <div className="space-y-4">
         {events.map((event, index) => (
           <div key={index} className={`bg-white p-4 shadow-md rounded-md ${openEventIndex === index ? 'border border-600' : ''}`}>
-            <div 
+            <div
               className={`flex justify-between items-center ${event.isSpecial ? 'text-xl font-bold' : 'text-xl font-semibold'} cursor-pointer ${openEventIndex === index ? 'text-red-600' : 'text-black'}`}
               onClick={() => toggleEventDetails(index)}
             >
