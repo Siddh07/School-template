@@ -3,6 +3,8 @@ import TeacherInfo from './TeacherInfo.json'; // Import JSON data
 import ContactForm from './ContactForm';
 import Location from './Location';
 
+import { ImQuotesLeft, ImQuotesRight } from "react-icons/im";
+
 // Import images statically from assets folder
 import PrincipalImage from '../assets/principal.jpg';
 import About1Image from '../assets/about-1.jpg'; // Example image
@@ -64,40 +66,43 @@ const About = () => {
       <div className='row justify-content-center'>
         <div className='col-lg-8 col-md-10 col-sm-12'>
           <div className='text-center'>
-            <h1 className='text-6xl text-gray-700 py-8 font-bold'>Our School</h1>
+            <h1 className='text-6xl text-gray-700 py-4 md:py-12 font-bold'>Our School</h1>
           </div>
           {isMobile ? (
             <p className='justify-center text-center px-4 text-gray-400 text-md md:px-[35%]'>
               {`${originalText.split(' ').slice(0, 17).join(' ')}...`}
             </p>
           ) : (
-            <p className='justify--center text-center md:mb-16 p-4 text-gray-400 text-md md:px-[35%]'>
+            <p className='justify--center text-center md:mb-8 p-4 text-gray-400 text-md md:px-[35%]'>
               {originalText}
             </p>
           )}
         </div>
       </div>
 
-      <div className='grid grid-cols-1 md:grid-cols-2 mt-6'>
+      <div className='grid grid-cols-1 md:grid-cols-2'>
         <div className=''>
-          <img src={PrincipalImage} alt="About-Principal" className="w-full h-auto rounded" />
+          <img src={PrincipalImage} alt="About-Principal" className="w-full h-auto rounded md:pt-[5%] md:pl-[35%] md:pr-6 p-12" />
         </div>
-        <div className='border justify-content-center text-center items-center bg-indigo-900 text-gray-200 hover:bg-gray-200 hover:text-indigo-900 transition duration-1000 ease-in-out py-8 md:py-14'>
-          <h3 className='text-4xl mt-[-2%] mb-4 font-serif underline'>
-            Principal's Message
+        <div className='text-left text-gray-600  transition duration-1000 ease-in-out md:py-14 p-4'>
+          <h3 className='text-2xl md:pl-2 md:pb-4 p-2 text-green-600'>
+            <ImQuotesLeft />
           </h3>
-          <p className='md:text-2xl text-lg px-6 md:px-24 font-serif'>
-            As your principal, my top priority is to ensure that you have a safe, supportive, and stimulating environment in which to learn and grow. Our dedicated teachers and staff are here to help you succeed, and I encourage you to take full advantage of the opportunities and resources available to you.
+          <p className='text-2xl md:pl-4 md:pr-[35%] font-serif italic px-4'>
+            This school will be sure that you have a safe, supportive, and stimulating environment in which to learn and grow.
+          </p>
+          <p className='md:pl-4 pt-4 md:text-left text-center text-lg font-serif'> 
+            Sarah Johnson - Principal
           </p>
         </div>
       </div>
 
 
-      <div className='row justify-content-center mt-8 md:mt-32'>
+      <div className='row justify-content-center mt-8 md:mt-24'>
         <div className='col-lg-8 col-md-10 col-sm-12'>
           <div className='grid grid-cols-1 md:grid-cols-2 md:ml-64 md:mr-64'>
             <div className="group bg-white text-indigo-900 transition duration-1000 ease-in-out justify-center py-4 md:py-2">
-              <h3 className="relative md:text-4xl text-4xl font-bold px-6 md:px-16 mb-2 after:content-[''] after:block after:w-full after:h-1 after:bg-current after:mt-2 after:transition-transform after:duration-500 after:ease-in-out after:scale-x-0 group-hover:after:scale-x-100">
+              <h3 className="relative md:text-4xl md:text-left text-center text-4xl font-bold px-6 md:px-16 mb-2 after:content-[''] after:block after:w-full after:h-1 after:bg-current after:mt-2 after:transition-transform after:duration-500 after:ease-in-out after:scale-x-0 group-hover:after:scale-x-100">
                 Values & Visions
               </h3>
               <ul className="mt-4 text-lg font-bold list-disc list-inside pl-16 md:pl-16">
@@ -127,8 +132,8 @@ const About = () => {
                 <div key={staff.id} className='relative text-left rounded-lg group shadow-xl'>
                   <img src={staffImages[staff.id]} alt={staff.name} className="w-full h-auto rounded-t-lg border-b-2 border-gray-200" />
                   <div className='mt-2 p-2'>
-                    <h3 className='md:text-xl text-xl'>{staff.name}</h3>
-                    <p className='md:text-lg text-md'>{staff.position}</p>
+                    <h3 className='md:text-lg text-xl'>{staff.name}</h3>
+                    <p className='md:text-md text-lg md:font-serif'>{staff.position}</p>
                   </div>
                 </div>
               ))}
@@ -140,8 +145,8 @@ const About = () => {
                 <div key={teacher.id} className='relative text-left rounded-lg shadow-xl group'>
                   <img src={teacherImages[teacher.id]} alt={teacher.name} className="w-full h-auto rounded-t-lg border-b-2 border-gray-200" />
                   <div className='p-2'>
-                    <h3 className='md:text-xl text-xl'>{teacher.name}</h3>
-                    <p className='md:text-lg text-md'>{teacher.position}</p>
+                    <h3 className='md:text-lg text-xl'>{teacher.name}</h3>
+                    <p className='md:text-md text-lg md:font-serif'>{teacher.position}</p>
                   </div>
                 </div>
               ))}
