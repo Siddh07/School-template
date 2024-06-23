@@ -75,7 +75,7 @@ const Slideshow = () => {
   };
 
   return (
-    <div className="container mx-auto py-8">
+    <div className="container mx-auto py-2">
       <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-4 gap-4">
         {images.slice(0, displayedImages).map((image, index) => (
           <div key={index} className="cursor-pointer" onClick={() => openSlideshow(index)}>
@@ -86,7 +86,7 @@ const Slideshow = () => {
 
       {images.length > displayedImages && (
         <div className="flex justify-center mt-4">
-          <button onClick={handleViewMore} className="mt-8 px-4 py-2 border-2 bg-indigo-600 text-lg text-white hover:border-indigo-600 hover:text-indigo-600 rounded hover:bg-gray-100 transition duration-500">
+          <button onClick={handleViewMore} className="mt-8  text-lg text-indigo-800 hover:text-indigo-500 hover:underline transition duration-100">
             View More
           </button>
         </div>
