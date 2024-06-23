@@ -46,14 +46,14 @@ const Navbar = () => {
 
   const getNavClass = (path) => (
     path === activePath
-      ? 'border-b-2 border-indigo-600 text-gray-900 inline-flex items-center px-1 pt-1 text-lg font-medium cursor-pointer'
-      : 'border-b-2 border-transparent text-gray-500 hover:border-gray-300 hover:text-gray-700 transition duration-250 ease-in-out inline-flex items-center px-1 pt-1 text-lg font-medium cursor-pointer'
+      ? 'border-b-2 border-indigo-600 text-gray-900 inline-flex items-center px-1 pt-1 text-md font-bold cursor-pointer'
+      : 'border-b-2 border-transparent text-gray-500 hover:border-gray-300 hover:text-gray-700 transition duration-250 ease-in-out inline-flex items-center px-1 pt-1 text-md font-medium cursor-pointer'
   );
 
   return (
     <header className={`bg-white shadow ${showNav ? 'sticky' : '-top-16'} top-0 z-50 transition-transform duration-300`}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-3 h-16 items-center relative">
+        <div className="grid grid-cols-3 h-14 items-center relative">
           {/* First grid: Logo */}
           <div className="flex items-center">
             <span className="md:text-xl text-xl font-bold cursor-pointer" onClick={() => handleNavigation('/')}>
@@ -130,7 +130,7 @@ const Navbar = () => {
           <div className="hidden sm:flex justify-end items-center">
             <button
               onClick={() => handleNavigation('/login')}
-              className="bg-indigo-600 text-white border-2 px-3 hover:bg-gray-100 hover:border-black hover:text-gray-700 transition duration-500 ease-in-out py-2 rounded-md text-md font-medium flex items-center"
+              className="bg-indigo-600 text-white border-2 px-2 hover:bg-gray-100 hover:border-black hover:text-gray-700 transition duration-500 ease-in-out py-[6px] rounded-md text-md font-medium flex items-center"
             >
               <IoPersonOutline className="mr-2" /> Log In
             </button>
