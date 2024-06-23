@@ -45,7 +45,7 @@ const LatestNews = () => {
           </a>
         )}
       </div>
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-8 px-12">
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-8 px-2 md:px-12">
         {posts.map(post => (
           <a 
             key={post.postId} 
