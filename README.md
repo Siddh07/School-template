@@ -74,7 +74,8 @@ Make sure you have the following installed on your local machine:
             react-leaflet@^4.2.1 \
             react-router-dom@^6.23.1 \
             react-slick@^0.30.2 \
-            slick-carousel@^1.8.1
+            slick-carousel@^1.8.1 \
+            countup.js
    ```
 
 ### Usage
