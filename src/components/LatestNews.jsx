@@ -45,7 +45,7 @@ const LatestNews = () => {
           </a>
         )}
       </div>
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-8 px-12">
         {posts.map(post => (
           <a 
             key={post.postId} 
@@ -58,7 +58,7 @@ const LatestNews = () => {
               className="w-full h-48 object-cover" 
             />
             <div className='p-4'>
-              <h3 className="text-xl font-semibold">{post.heading}</h3>
+              <h3 className="text-lg font-semibold">{post.heading}</h3>
               <p className="text-md text-gray-600">{truncateDescription(post.description)}</p>
             </div>
           </a>

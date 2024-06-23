@@ -86,10 +86,10 @@ const Page = () => {
                 should be communicated to the school well in advance. 
                 Note that extended absences during term time are discouraged as they can impact your child's learning. 
                 </p>
-                <img src={Holiday} alt="Holiday" className="rounded-md mx-auto mt-4 px-6 mb-10" />
+                <img src={Holiday} alt="Holiday" className="rounded-md mx-auto mt-4 px-6 mb-4" />
             </div>
         <h2 className="text-2xl font-serif font-semibold">Page 3</h2>
-          <div className="flex justify-between mt-2">
+          <div className="flex justify-between">
                 <FontAwesomeIcon icon={faArrowLeft} className="border-2 text-white bg-indigo-600 rounded-full p-2 cursor-pointer hover:border-indigo-600 hover:text-indigo-600 hover:bg-gray-100 mr-2" onClick={prevPage} />
                 <FontAwesomeIcon icon={faArrowRight} className="border-2 text-white bg-indigo-600 rounded-full p-2 cursor-pointer hover:border-indigo-600 hover:text-indigo-600 hover:bg-gray-100 ml-2" onClick={nextPage} />
             </div>

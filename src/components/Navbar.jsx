@@ -46,7 +46,7 @@ const Navbar = () => {
 
   const getNavClass = (path) => (
     path === activePath
-      ? 'border-b-2 border-indigo-500 text-gray-900 inline-flex items-center px-1 pt-1 text-lg font-medium cursor-pointer'
+      ? 'border-b-2 border-indigo-600 text-gray-900 inline-flex items-center px-1 pt-1 text-lg font-medium cursor-pointer'
       : 'border-b-2 border-transparent text-gray-500 hover:border-gray-300 hover:text-gray-700 transition duration-250 ease-in-out inline-flex items-center px-1 pt-1 text-lg font-medium cursor-pointer'
   );
 
@@ -56,7 +56,7 @@ const Navbar = () => {
         <div className="grid grid-cols-3 h-16 items-center relative">
           {/* First grid: Logo */}
           <div className="flex items-center">
-            <span className="md:text-3xl text-xl font-bold cursor-pointer" onClick={() => handleNavigation('/')}>
+            <span className="md:text-xl text-xl font-bold cursor-pointer" onClick={() => handleNavigation('/')}>
               School-Logo
             </span>
           </div>
@@ -130,7 +130,7 @@ const Navbar = () => {
           <div className="hidden sm:flex justify-end items-center">
             <button
               onClick={() => handleNavigation('/login')}
-              className="bg-indigo-600 text-white border-2 px-3 hover:bg-gray-100 hover:border-black hover:text-gray-700 transition duration-500 ease-in-out py-2 rounded-md text-lg font-medium flex items-center"
+              className="bg-indigo-600 text-white border-2 px-3 hover:bg-gray-100 hover:border-black hover:text-gray-700 transition duration-500 ease-in-out py-2 rounded-md text-md font-medium flex items-center"
             >
               <IoPersonOutline className="mr-2" /> Log In
             </button>
