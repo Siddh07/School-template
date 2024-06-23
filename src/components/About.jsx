@@ -66,14 +66,14 @@ const About = () => {
       <div className='row justify-content-center'>
         <div className='col-lg-8 col-md-10 col-sm-12'>
           <div className='text-center'>
-            <h1 className='text-6xl text-gray-700 py-4 md:py-12 font-bold'>Our School</h1>
+            <h1 className='text-6xl text-gray-700 py-4 md:py-8 font-bold'>Our School</h1>
           </div>
           {isMobile ? (
             <p className='justify-center text-center px-4 text-gray-400 text-md md:px-[35%]'>
               {`${originalText.split(' ').slice(0, 17).join(' ')}...`}
             </p>
           ) : (
-            <p className='justify--center text-center md:mb-8 p-4 text-gray-400 text-md md:px-[35%]'>
+            <p className='justify--center text-center md:mb-8 text-gray-400 text-md md:px-[35%]'>
               {originalText}
             </p>
           )}
