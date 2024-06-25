@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { IoPersonOutline } from 'react-icons/io5';
+import { FaFacebook, FaInstagram, FaGithub } from 'react-icons/fa';
 import { useNavigate, useLocation } from 'react-router-dom';
 
 const Navbar = () => {
@@ -127,19 +127,22 @@ const Navbar = () => {
             </button>
           </div>
           {/* Third grid: Log In Button (Visible on larger screens) */}
-          <div className="hidden sm:flex justify-end items-center">
-            <button
-              onClick={() => handleNavigation('/login')}
-              className="bg-indigo-600 text-white border-2 px-2 hover:bg-gray-100 hover:border-black hover:text-gray-700 transition duration-500 ease-in-out py-[6px] rounded-md text-md font-medium flex items-center"
-            >
-              <IoPersonOutline className="mr-2" /> Log In
-            </button>
+          <div className="hidden sm:flex justify-end items-center space-x-4">
+            <a href="https://www.facebook.com" target="_blank" rel="noopener noreferrer" className="text-indigo-600 hover:text-gray-700">
+              <FaFacebook className="h-6 w-6" />
+            </a>
+            <a href="https://www.instagram.com" target="_blank" rel="noopener noreferrer" className="text-pink-700 hover:text-gray-700">
+              <FaInstagram className="h-6 w-6" />
+            </a>
+            <a href="https://www.github.com" target="_blank" rel="noopener noreferrer" className="text-gray-900 hover:text-gray-700">
+              <FaGithub className="h-6 w-6" />
+            </a>
           </div>
         </div>
         {/* Mobile Menu */}
         {menuOpen && (
-          <nav className="sm:hidden absolute top-16 left-0 right-0 z-50 bg-white shadow-lg">
-            <div className="px-2 pt-5 pb-10 space-y-5 flex flex-col items-center">
+          <nav className="sm:hidden absolute top-12 left-0 right-0 z-50 bg-white shadow-xl">
+            <div className="px-2 pt-8 pb-12 space-y-5 flex flex-col items-center">
               <span
                 onClick={() => handleNavigation('/')}
                 className="block px-3 py-2 rounded-md font-medium text-gray-700 hover:text-gray-900 hover:bg-gray-50 text-xl cursor-pointer"
@@ -166,16 +169,21 @@ const Navbar = () => {
               </span>
               <span
                 onClick={() => handleNavigation('/parent')}
-                className="block px-3 py-2 rounded-md text-xl font-medium text-gray-700 hover:text-gray-900 hover:bg-gray-50 cursor-pointer"
+                className="block px-3 pt-2 pb-4 rounded-md text-xl font-medium text-gray-700 hover:text-gray-900 hover:bg-gray-50 cursor-pointer"
               >
                 Parent
               </span>
-              <span
-                onClick={() => handleNavigation('/login')}
-                className="block px-3 py-2 rounded-md text-xl font-medium bg-indigo-600 text-white border-2 hover:bg-gray-100 hover:border-black hover:text-gray-700 transition duration-500 ease-in-out cursor-pointer"
-              >
-                Log In
-              </span>
+              <div className="flex space-x-8">
+                <a href="https://www.facebook.com" target="_blank" rel="noopener noreferrer" className="text-indigo-600 hover:text-gray-700 text-lg">
+                  <FaFacebook className="h-8 w-8" />
+                </a>
+                <a href="https://www.instagram.com" target="_blank" rel="noopener noreferrer" className="text-pink-700 hover:text-gray-700">
+                  <FaInstagram className="h-8 w-8" />
+                </a>
+                <a href="https://www.github.com" target="_blank" rel="noopener noreferrer" className="text-gray-900 hover:text-gray-700">
+                  <FaGithub className="h-8 w-8" />
+                </a>
+              </div>
             </div>
           </nav>
         )}
