@@ -53,9 +53,9 @@ const Hero = () => {
   return (
     <div>
       <section className="h-auto md:h-[55vh] grid grid-cols-1 md:grid-cols-2">
-        <div className="order-1 md:order-1 flex items-center justify-center md:justify-start h-full bg-yellow-400">
+        <div className="order-2 md:order-1 flex items-center justify-center md:justify-start h-full bg-yellow-400 md:pb-0 pb-2 px-8">
           <div className={`text-center md:text-left text-black p-4 md:p-8 md:max-w-xl md:ml-32 md:mt-[1%] leading-relaxed ${isMobile ? 'animate-scale' : ''}`}>
-            <p className="text-base sm:text-lg md:text-2xl lg:text-4xl mb-4 ml-2 transform transition-transform duration-500 ease-in-out">
+            <p className="text-lg md:text-2xl lg:text-4xl mb-4 ml-2 transform transition-transform duration-500 ease-in-out">
               Be a part of our journey to Success and enjoy the learning experience
             </p>
             <div className="flex justify-center md:justify-start items-center md:mt-8">
@@ -66,12 +66,12 @@ const Hero = () => {
           </div>
         </div>
         <div
-          className="order-2 md:order-2 bg-yellow-400 bg-center bg-no-repeat h-96 md:h-auto md:mb-0 overflow-hidden"
+          className="order-1 md:order-2 bg-yellow-400 bg-center bg-no-repeat h-80 md:h-auto md:mb-0 overflow-hidden p-2"
           style={{ backgroundImage: `url(${bgHome})`, backgroundSize: 'contain' }}
         ></div>
       </section>
 
-      <section className="py-4 sm:mt-4 md:mt-4">
+      <section className="px-8 py-4 sm:mt-4 md:mt-4">
         <h3 className='text-center mb-4 text-xl text-gray-800 font-bold font-serif'>Academy at a Glance</h3>
         <div className="grid grid-cols-4 md:px-64 md:grid-cols-4 text-center">
           {[
@@ -80,8 +80,8 @@ const Hero = () => {
             { title: 'Courses', count: 50 },
             { title: 'Current Enrollment', count: 2034 }
           ].map((item, index) => (
-            <div className="p-4" key={index}>
-              <h3 id={index.toString()} className='mb-4 text-xl md:text-6xl font-bold text-indigo-800'>{item.count}</h3>
+            <div className="px-2 py-4" key={index}>
+              <h3 id={index.toString()} className='mb-4 text-2xl md:text-6xl font-bold text-indigo-800'>{item.count}</h3>
               <p className='md:text-md text-sm font-bold'>{item.title}</p>
             </div>
           ))}
@@ -125,17 +125,6 @@ const Hero = () => {
           <p className="text-lg text-gray-600">Take a glimpse into our vibrant community.</p>
         </div>
         <Slideshow />
-      </section>
-
-      <section className="p-8 mt-[-2%] bg-white">
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-2">
-          <div className="col-span-1 md:col-span-1 md:ml-[35%]">
-            <Location />
-          </div>
-          <div className="col-span-1 md:col-span-1 md:mr-[35%]">
-            <ContactForm/>
-          </div>
-        </div>
       </section>
     </div>
   );
