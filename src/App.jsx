@@ -8,6 +8,8 @@ import About from './components/About';
 import Learning from './components/Learning';
 import Parent from './components/Parent';
 import News from './components/News';
+import Safety from './components/Parent/Safety';
+import Support from './components/Support';
 
 function App() {
   return (
@@ -21,6 +23,8 @@ function App() {
           <Route path="/learning" element={<Learning />}/>
           <Route path="/parent" element={<Parent />} /> 
           <Route path="/news" element={<News />} />
+          <Route path="/safety" element={<Safety />} />
+          <Route path="/support" element={<Support />} />
         </Routes>
         <Footer />
       </div>

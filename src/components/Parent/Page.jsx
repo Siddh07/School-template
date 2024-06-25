@@ -1,8 +1,7 @@
-// src/Page.js
-
 import React, { useState } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faArrowLeft, faArrowRight } from '@fortawesome/free-solid-svg-icons';
+import { Link } from 'react-router-dom';
 import './Page.css';
 
 // Images from the assets folder  
@@ -97,26 +96,26 @@ const Page = () => {
       );
       break;
     case 4:
-      pageContent = (
-        <div className={`page page3 ${animationDirection === 'next' ? 'page-next' : ''} ${animationDirection === 'prev' ? 'page-prev' : ''}`}>
-          <div className='text-center mt-[-55%] md:mt-[-5%] md:px-[25%]'>
-                <span className="text-4xl text-gray-500">
-                    <h1 className='font-bold text-red-600 mb-6'>Safety First</h1>
-                </span>
-                <p className="text-lg font-serif leading-relaxed text-gray-700 mb-4 px-16">
-                 All students must follow school rules and guidelines to ensure a secure and safe environment for everyone on school grounds.
-                </p>
-                <button className='mb-8 border-2 bg-red-600 p-2 md:text-md text-white rounded-md hover:border-red-600 hover:text-red-600 hover:bg-gray-100 shadow-xl transition duration-1000 ease-in-out'>
-                    Safety Measures
-                </button>
-            </div>
-            <h2 className="text-2xl font-serif font-semibold">Page 4</h2>
-          <div className="text-left mt-2">
-            <FontAwesomeIcon icon={faArrowLeft} className="border-2 text-white bg-indigo-600 rounded-full p-2 cursor-pointer hover:border-indigo-600 hover:text-indigo-600 hover:bg-gray-100 mr-2" onClick={prevPage} />
-          </div>
+    pageContent = (
+      <div className={`page page3 ${animationDirection === 'next' ? 'page-next' : ''} ${animationDirection === 'prev' ? 'page-prev' : ''}`}>
+        <div className='text-center mt-[-55%] md:mt-[-5%] md:px-[25%]'>
+          <span className="text-4xl text-gray-500">
+            <h1 className='font-bold text-red-600 mb-6'>Safety First</h1>
+          </span>
+          <p className="text-lg font-serif leading-relaxed text-gray-700 mb-4 px-16">
+            All students must follow school rules and guidelines to ensure a secure and safe environment for everyone on school grounds.
+          </p>
+          <Link to="/safety" className="border-2 bg-red-600 p-2 md:text-md text-white rounded-md hover:border-red-600 hover:text-red-600 hover:bg-gray-100 shadow-xl transition duration-1000 ease-in-out">
+            Safety Measures
+          </Link>
         </div>
-      );
-      break;
+        <h2 className="text-2xl font-serif font-semibold mt-8">Page 4</h2>
+        <div className="text-left mt-2">
+          <FontAwesomeIcon icon={faArrowLeft} className="border-2 text-white bg-indigo-600 rounded-full p-2 cursor-pointer hover:border-indigo-600 hover:text-indigo-600 hover:bg-gray-100 mr-2" onClick={prevPage} />
+        </div>
+      </div>
+    );
+    break;
     default:
       pageContent = (
         <div className={`page page1 ${animationDirection === 'next' ? 'page-next' : ''} ${animationDirection === 'prev' ? 'page-prev' : ''}`}>
