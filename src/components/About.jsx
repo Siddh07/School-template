@@ -69,11 +69,11 @@ const About = () => {
             <h1 className='text-6xl text-gray-700 py-4 md:py-8 font-bold'>Our School</h1>
           </div>
           {isMobile ? (
-            <p className='justify-center text-center px-4 text-gray-400 text-md md:px-[35%]'>
+            <p className='text-center font-serif px-4 text-gray-400 text-md md:px-[35%]'>
               {`${originalText.split(' ').slice(0, 17).join(' ')}...`}
             </p>
           ) : (
-            <p className='justify--center text-center md:mb-8 text-gray-400 text-md md:px-[35%]'>
+            <p className='font-serif text-center md:mb-8 text-gray-400 text-md md:px-[35%]'>
               {originalText}
             </p>
           )}
