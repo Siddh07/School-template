@@ -12,7 +12,7 @@ import Location from './Location';
 const Hero = () => {
   const [isMobile, setIsMobile] = useState(false);
   const startValues = [0, 0, 0, 0]; // Initial start values for each count-up number
-  const endValues = [100, 50, 500, 2000]; // End values for each count-up number
+  const endValues = [91, 83, 50, 2134]; // End values for each count-up number
   const duration = 10; // Duration for each count-up animation in seconds
 
   useCountUp(startValues, endValues, duration);
@@ -75,10 +75,10 @@ const Hero = () => {
         <h3 className='text-center mb-4 text-xl text-gray-800 font-bold font-serif'>Academy at a Glance</h3>
         <div className="grid grid-cols-4 md:px-64 md:grid-cols-4 text-center">
           {[
-            { title: 'SEE Toppers', count: 100 },
-            { title: 'Qualified Staffs', count: 50 },
-            { title: 'Courses', count: 500 },
-            { title: 'Current Enrollment', count: 2000 }
+            { title: 'SEE Toppers', count: 91 },
+            { title: 'Qualified Staffs', count: 83 },
+            { title: 'Courses', count: 50 },
+            { title: 'Current Enrollment', count: 2034 }
           ].map((item, index) => (
             <div className="p-4" key={index}>
               <h3 id={index.toString()} className='mb-4 text-xl md:text-6xl font-bold text-indigo-800'>{item.count}</h3>
