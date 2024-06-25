@@ -1,0 +1,29 @@
+[
+  {
+    "date": "Apr 17, 2035",
+    "time": "4:00 PM",
+    "title": "Board of Education Special Meeting",
+    "location": "500 Terry A Francois Blvd, San Francisco, CA 94158, USA",
+    "description": "I'm an event headline. Group your events under me.",
+    "isSpecial": true
+  },
+  {
+    "date": "Tue, May 29",
+    "title": "Reading Olympics",
+    "location": "500 Terry A Francois Blvd",
+    "description": "An exciting event where students compete in reading challenges."
+  },
+  {
+    "date": "Tue, Aug 21",
+    "title": "New Teacher Workshop",
+    "location": "500 Terry A Francois Blvd",
+    "description": "A workshop to help new teachers get acquainted with the school and its policies.",
+    "isSpecial": true
+  },
+  {
+    "date": "Wed, Sep 05",
+    "title": "Labor Day - Schools Closed",
+    "location": "500 Terry A Francois Blvd",
+    "description": "School will be closed in observance of Labor Day."
+  }
+]

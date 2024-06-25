@@ -1,5 +1,5 @@
 import React from 'react';
-import SchoolEvents from './SchoolsEvents';
+import SchoolEvents from './News/SchoolsEvents';
 import NewsContents from './NewsContents';
 import Layout from './Layout';
 
