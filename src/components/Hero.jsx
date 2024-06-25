@@ -6,8 +6,7 @@ import GridImg2 from '../assets/GridImg-2.jpg';
 import './animation.css';
 import LatestNews from './LatestNews';
 import Slideshow from './Slideshow';
-import ContactForm from './ContactForm';
-import Location from './Location';
+import Testimonal from './Testimonial/Testimonal';
 
 const Hero = () => {
   const [isMobile, setIsMobile] = useState(false);
@@ -120,11 +119,17 @@ const Hero = () => {
       </div>
 
       <section id="gallery-section" className="p-8 mt-6 bg-white">
-        <div className="justify-center text-center mb-8">
+        <div className="justify-center text-center mb-4">
           <h2 className="text-4xl font-bold mb-4 text-gray-800 font-custom">Moments saved in school</h2>
           <p className="text-lg text-gray-600">Take a glimpse into our vibrant community.</p>
         </div>
         <Slideshow />
+      </section>
+
+      <section>
+        <div className='mb-8'>
+          <Testimonal />
+        </div>
       </section>
     </div>
   );
