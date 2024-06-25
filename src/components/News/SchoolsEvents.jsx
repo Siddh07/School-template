@@ -10,7 +10,6 @@ const SchoolsEvents = () => {
     setOpenEventIndex((prevIndex) => (prevIndex === index ? null : index));
   };
 
-  // Function to handle clicks outside the event details box
   const handleClickOutside = (event) => {
     if (containerRef.current && !containerRef.current.contains(event.target)) {
       setOpenEventIndex(null);
@@ -18,10 +17,7 @@ const SchoolsEvents = () => {
   };
 
   useEffect(() => {
-    // Attach the event listener when the component mounts
     document.addEventListener('mousedown', handleClickOutside);
-
-    // Clean up the event listener when the component unmounts
     return () => {
       document.removeEventListener('mousedown', handleClickOutside);
     };
@@ -34,7 +30,7 @@ const SchoolsEvents = () => {
         {events.map((event, index) => (
           <div
             key={index}
-            className={`bg-gray-300 p-4 shadow-md rounded-md ${openEventIndex === index ? 'border border-red-600' : ''}`}
+            className={`p-4 shadow-md rounded-md ${openEventIndex === index ? 'bg-gray-100 border border-red-500' : 'bg-gray-300'}`}
           >
             <div
               className={`flex justify-between items-center ${event.isSpecial ? 'text-xl font-bold' : 'text-xl font-semibold'} cursor-pointer ${openEventIndex === index ? 'text-red-600' : 'text-black'}`}
