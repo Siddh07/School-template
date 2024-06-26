@@ -1,12 +1,23 @@
 import React from 'react';
 import SchoolEvents from './News/SchoolsEvents';
+import NewsPosts from './News/NewsPosts';
+import LatestPosts from './News/LatestPosts';
+
 import NewsContents from './NewsContents';
-import Layout from './Layout';
+
 
 const News = () => {
   return (
     <div>
-      <SchoolEvents />
+      <div>
+        <LatestPosts />
+      </div>
+      <div className='mt-4'>
+        <NewsPosts />
+      </div>
+      <div className='mt-4'>
+        <SchoolEvents />
+      </div>
     </div>
   );
 }

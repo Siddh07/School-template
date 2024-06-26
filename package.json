@@ -17,6 +17,7 @@
     "@fortawesome/fontawesome-svg-core": "^6.5.2",
     "@fortawesome/free-solid-svg-icons": "^6.5.2",
     "@fortawesome/react-fontawesome": "^0.2.2",
+    "axios": "^1.7.2",
     "countup.js": "^2.8.0",
     "leaflet": "^1.9.4",
     "react": "^18.3.1",

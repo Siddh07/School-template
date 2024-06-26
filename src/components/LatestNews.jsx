@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from 'react';
 import { useLocation } from 'react-router-dom';
-import postImage8 from '../posts/post-8.jpg';
-import postImage9 from '../posts/post-9.jpg';
-import postImage10 from '../posts/post-10.jpg';
-import postsData from './Posts.json';
+import postImage8 from './posts/post-8.jpg';
+import postImage9 from './posts/post-9.jpg';
+import postImage10 from './posts/post-10.jpg';
+import postsData from './News/Posts.json';
 
 const LatestNews = () => {
   const [posts, setPosts] = useState([]);
