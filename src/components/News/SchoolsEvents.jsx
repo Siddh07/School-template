@@ -24,9 +24,9 @@ const SchoolsEvents = () => {
   }, []);
 
   return (
-    <div className="bg-white p-4 md:py-8 md:px-16" ref={containerRef}>
-      <h2 className="text-3xl md:text-start text-center font-bold mb-4">Schools' Events</h2>
-      <div className="space-y-4">
+    <div className="bg-white p-4" ref={containerRef}>
+      <h2 className="text-3xl md:text-start md:ml-8 text-center text-gray-800 font-bold mb-8">Schools' Events</h2>
+      <div className="space-y-4 md:px-16">
         {events.map((event, index) => (
           <div
             key={index}

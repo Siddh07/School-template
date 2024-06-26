@@ -10,6 +10,7 @@ import Parent from './components/Parent';
 import News from './components/News';
 import Safety from './components/Parent/Safety';
 import Support from './components/Support';
+import PostPage from './components/PostPage'; // Correct import
 
 function App() {
   return (
@@ -20,11 +21,12 @@ function App() {
           <Route path="/" element={<Hero />} />
           <Route path="/login" element={<Auth />} />
           <Route path="/about" element={<About />} />
-          <Route path="/learning" element={<Learning />}/>
-          <Route path="/parent" element={<Parent />} /> 
+          <Route path="/learning" element={<Learning />} />
+          <Route path="/parent" element={<Parent />} />
           <Route path="/news" element={<News />} />
           <Route path="/safety" element={<Safety />} />
           <Route path="/support" element={<Support />} />
+          <Route path="/post/:postId" element={<PostPage />} />
         </Routes>
         <Footer />
       </div>

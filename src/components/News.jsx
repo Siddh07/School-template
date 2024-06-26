@@ -3,8 +3,6 @@ import SchoolEvents from './News/SchoolsEvents';
 import NewsPosts from './News/NewsPosts';
 import LatestPosts from './News/LatestPosts';
 
-import NewsContents from './NewsContents';
-
 
 const News = () => {
   return (
@@ -12,7 +10,7 @@ const News = () => {
       <div>
         <LatestPosts />
       </div>
-      <div className='mt-4'>
+      <div className='mt-8'>
         <NewsPosts />
       </div>
       <div className='mt-4'>

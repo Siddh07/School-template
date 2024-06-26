@@ -49,7 +49,7 @@ const LatestNews = () => {
         {posts.map(post => (
           <a 
             key={post.postId} 
-            href={`/School/news/post-${post.postId}`} 
+            href={`/School/post/${post.postId}`} 
             className="bg-white shadow-md transition duration-350 ease-in-out transform hover:-translate-y-1 hover:scale-105 block"
           >
             <img 
