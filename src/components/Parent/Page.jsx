@@ -105,7 +105,7 @@ const Page = () => {
           <p className="text-lg font-serif leading-relaxed text-gray-700 mb-4 px-16">
             All students must follow school rules and guidelines to ensure a secure and safe environment for everyone on school grounds.
           </p>
-          <Link to="/safety" className="border-2 bg-red-600 p-2 md:text-md text-white rounded-md hover:border-red-600 hover:text-red-600 hover:bg-gray-100 shadow-xl transition duration-1000 ease-in-out">
+          <Link to="/safety" className="border-2 bg-red-600 p-2 md:text-sm text-white rounded-md hover:border-red-600 hover:text-red-600 hover:bg-gray-100 shadow-xl transition duration-1000 ease-in-out">
             Safety Measures
           </Link>
         </div>

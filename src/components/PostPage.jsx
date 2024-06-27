@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 import postsData from './News/Posts.json'; // Adjust path as necessary
 
@@ -47,6 +47,10 @@ const formatText = (text) => {
 const PostPage = () => {
   let { postId } = useParams();
   const post = postsData.posts.find(post => post.postId === postId);
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
 
   if (!post) {
     return <div>Post not found</div>; // Handle case where post is not found

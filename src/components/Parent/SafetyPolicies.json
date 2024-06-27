@@ -1,0 +1,52 @@
+[
+  {
+    "title": "Visitor Policy",
+    "content": "All visitors must sign in at the front office and wear a visitor badge at all times. Visits to classrooms must be scheduled in advance.",
+    "key": "visitor"
+  },
+  {
+    "title": "Emergency Procedures",
+    "content": "In case of an emergency, students and staff must follow the evacuation plans posted in each classroom. Regular drills will be conducted to ensure preparedness.",
+    "key": "emergency"
+  },
+  {
+    "title": "Health and Wellness",
+    "content": "Students are encouraged to wash their hands frequently and use hand sanitizer stations located throughout the school. Sick students should stay home to prevent the spread of illness.",
+    "key": "health"
+  },
+  {
+    "title": "Anti-Bullying Policy",
+    "content": "Our school has a zero-tolerance policy towards bullying. Students and staff are encouraged to report any instances of bullying to the administration immediately.",
+    "key": "bullying"
+  },
+  {
+    "title": "Attendance Policy",
+    "content": "Regular attendance is crucial for student success. Parents are required to notify the school of any absences. Chronic absenteeism will be addressed by the school administration.",
+    "key": "attendance"
+  },
+  {
+    "title": "Dress Code Policy",
+    "content": "Students are expected to dress in a manner that is appropriate for a learning environment. Clothing with offensive language or imagery is not permitted.",
+    "key": "dresscode"
+  },
+  {
+    "title": "Technology Use Policy",
+    "content": "Students are encouraged to use school technology responsibly. Personal devices should be used only during designated times and must not disrupt the learning environment.",
+    "key": "technology"
+  },
+  {
+    "title": "Code of Conduct",
+    "content": "Students are expected to behave respectfully towards peers and staff. Any form of disrespect, discrimination, or harassment will not be tolerated.",
+    "key": "conduct"
+  },
+  {
+    "title": "Homework Policy",
+    "content": "Homework is an essential part of the learning process. Students are expected to complete assignments on time. Teachers will provide feedback to support student learning.",
+    "key": "homework"
+  },
+  {
+    "title": "Extracurricular Activities",
+    "content": "Students are encouraged to participate in extracurricular activities. These activities help in the overall development of students and foster a sense of community.",
+    "key": "extracurricular"
+  }
+]

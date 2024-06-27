@@ -39,13 +39,13 @@ const LatestNews = () => {
         {!isNewsPage && (
           <a 
             href="/School/news" 
-            className="text-gray-200 inline-block rounded border-2 bg-indigo-600 px-4 py-2 hover:border-blue-700 hover:bg-gray-100 hover:text-blue-700 transition duration-500 ease-in-out"
+            className="text-gray-200 inline-block rounded border-2 bg-indigo-600 px-2 py-1 hover:border-blue-700 hover:bg-gray-100 hover:text-blue-700 transition duration-500 ease-in-out"
           >
-            Read all News
+            All News
           </a>
         )}
       </div>
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-8 px-2 md:px-12">
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-8 px-2 md:px-32">
         {posts.map(post => (
           <a 
             key={post.postId} 

@@ -58,7 +58,7 @@ const NewsPosts = () => {
                 className="w-full h-48 object-cover"
               />
               <div className="p-4">
-                <h2 className="text-xl font-semibold mb-2 text-gray-800">{post.heading}</h2>
+                <h2 className="text-lg font-semibold mb-2 text-gray-800">{post.heading}</h2>
                 <p className="text-gray-600 mb-4">{truncateDescription(post.description)}</p>
                 <p className="text-gray-500 text-sm">{formatDate(post.datePublished)}</p>
               </div>
