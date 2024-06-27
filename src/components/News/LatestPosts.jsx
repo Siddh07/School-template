@@ -26,7 +26,7 @@ const LatestPosts = () => {
   };
 
   return (
-    <div className="container mx-auto p-2 mt-4">
+    <div className="container mx-auto p-6 md:p-2 mt-4">
       {posts.length === 0 ? (
         <p className="text-center text-gray-600">No posts available.</p>
       ) : (

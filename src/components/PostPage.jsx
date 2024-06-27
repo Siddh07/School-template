@@ -70,7 +70,7 @@ const PostPage = () => {
               <img
                 src={authorImage}
                 alt={post.author.name}
-                className="h-10 w-10 rounded-full"
+                className="w-[50px] h-[50px] object-cover rounded-full"
               />
             </div>
           )}
