@@ -29,7 +29,7 @@ const LatestNews = () => {
     return description;
   };
 
-  const isNewsPage = location.pathname.startsWith('/School/news');
+  const isNewsPage = location.pathname.startsWith('/School-template/news');
 
   return (
     <div className="mx-auto max-w-7xl p-8">
@@ -38,7 +38,7 @@ const LatestNews = () => {
         <h2 className="text-3xl text-gray-700 font-bold">Latest News</h2>
         {!isNewsPage && (
           <a 
-            href="/School/news" 
+            href="/School-template/news" 
             className="text-gray-200 inline-block rounded border-2 bg-indigo-600 px-2 py-1 hover:border-blue-700 hover:bg-gray-100 hover:text-blue-700 transition duration-500 ease-in-out"
           >
             All News
@@ -49,7 +49,7 @@ const LatestNews = () => {
         {posts.map(post => (
           <a 
             key={post.postId} 
-            href={`/School/post/${post.postId}`} 
+            href={`/School-template/post/${post.postId}`} 
             className="bg-white shadow-md transition duration-350 ease-in-out transform hover:-translate-y-1 hover:scale-105 block"
           >
             <img 

@@ -47,19 +47,19 @@ const Support = () => {
               What are the school policies regarding...?
             </h3>
             <p className="text-gray-700 mt-2">
-              Detailed school policies are available in our <a href="/School/safety" className="text-blue-500 hover:underline">policies section</a>.
+              Detailed school policies are available in our <a href="/School-template/safety" className="text-blue-500 hover:underline">policies section</a>.
             </p>
           </div>
           <div className="py-4">
             <h3 className="text-lg font-semibold">How can I contact my child's teacher?</h3>
             <p className="text-gray-700 mt-2">
-              Contact information for teachers is usually available on the <a href="/School/about" className="text-blue-500 hover:underline">teachers' page</a> of our website.
+              Contact information for teachers is usually available on the <a href="/School-template/about" className="text-blue-500 hover:underline">teachers' page</a> of our website.
             </p>
           </div>
           <div className="py-4">
             <h3 className="text-lg font-semibold">What extracurricular activities are available?</h3>
             <p className="text-gray-700 mt-2">
-              Information about extracurricular activities can be found in the <a href="/School/learning" className="text-blue-500 hover:underline">activities section</a> of our website.
+              Information about extracurricular activities can be found in the <a href="/School-template/learning" className="text-blue-500 hover:underline">activities section</a> of our website.
             </p>
           </div>
           {/* Add more FAQ items as needed */}

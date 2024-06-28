@@ -14,7 +14,7 @@ import PostPage from './components/PostPage'; // Correct import
 
 function App() {
   return (
-    <Router basename="/School/">
+    <Router basename="/School-template/">
       <div className="App">
         <Navbar />
         <Routes>
